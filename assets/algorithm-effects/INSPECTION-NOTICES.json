@@ -1,0 +1,112 @@
+[
+  {
+    "id": "4-0",
+    "src": "./assets/algorithm-effects/crop-classification.png",
+    "alt": "以不同颜色区分作物类别，并提取农田地块边界。",
+    "caption": "以不同颜色区分作物类别，并提取农田地块边界。",
+    "sourceURL": "https://raw.githubusercontent.com/VSainteuf/utae-paps/main/gfx/predictions.png",
+    "license": "MIT",
+    "author": "Vivien Sainte Fare Garnot and collaborators",
+    "licensePath": "./assets/algorithm-effects/licenses/UTAE-MIT.txt",
+    "derived": false
+  },
+  {
+    "id": "4-1",
+    "src": "./assets/algorithm-effects/tree-species.png",
+    "alt": "树种分类结果以不同颜色呈现树木类型及空间分布。",
+    "caption": "树种分类结果以不同颜色呈现树木类型及空间分布。",
+    "sourceURL": "https://github.com/QiaosiLi/tree_species_classification/assets/140426435/cd7a7add-fb14-4983-bcfe-855451216ea2",
+    "license": "MIT",
+    "author": "Qiaosi Li, Wong and Fung",
+    "licensePath": "./assets/algorithm-effects/licenses/TREE-SPECIES-MIT.txt",
+    "derived": false
+  },
+  {
+    "id": "4-2",
+    "src": "./assets/algorithm-effects/plant-disease-explainability.webp",
+    "alt": "病叶原图、分类模型热图与热图叠加结果对照。",
+    "caption": "展示叶片病害分类结果的模型关注区域。",
+    "sourceURL": "https://www.frontiersin.org/files/Articles/1412988/xml-images/fpls-15-1412988-g012.webp",
+    "attributionURL": "https://doi.org/10.3389/fpls.2024.1412988",
+    "license": "CC-BY-4.0",
+    "licensePath": "./assets/algorithm-effects/licenses/CC-BY-4.0.txt",
+    "author": "R. H. Reazul Hasan Prince, Abdullah Al Mamun, Hasan Imam Peyal, Samin Miraz, Md. Nahiduzzaman, Amith Khandakar and Muhammad Abdul Manan Ayari (2024)",
+    "derived": false,
+    "visualKind": "classification-explanation",
+    "note": "Figure 12 from CSXAI. Real Grad-CAM model explanations, not pixel-accurate lesion masks. Complete original figure retained."
+  },
+  {
+    "id": "4-3",
+    "src": "./assets/algorithm-effects/sheep-detection.png",
+    "alt": "在航拍画面中标出羊只位置，辅助群体计数。",
+    "caption": "在航拍画面中标出羊只位置，辅助群体计数。",
+    "sourceURL": "https://raw.githubusercontent.com/ICAERUS-EU/UC3_Livestock_Monitoring/main/data/Images/mauron_example1_predict_v1.png",
+    "license": "GPL-3.0",
+    "author": "ICAERUS / Louise Helary, Aristide Lauront, Madeline Le Pors",
+    "licensePath": "./assets/algorithm-effects/licenses/ICAERUS-GPL-3.0.txt",
+    "derived": false
+  },
+  {
+    "id": "4-4",
+    "src": "./assets/algorithm-effects/cow-detection.png",
+    "alt": "在牧场影像中标出牛只的位置。",
+    "caption": "在牧场影像中标出牛只的位置。",
+    "sourceURL": "https://raw.githubusercontent.com/ICAERUS-EU/UC3_Livestock_Monitoring/main/data/Images/cow_model_icon.PNG",
+    "license": "GPL-3.0",
+    "author": "ICAERUS / Louise Helary, Aristide Lauront, Madeline Le Pors",
+    "licensePath": "./assets/algorithm-effects/licenses/ICAERUS-GPL-3.0.txt",
+    "derived": false,
+    "note": "Small 313x293 image, do not upscale too aggressively."
+  },
+  {
+    "id": "5-0",
+    "src": "./assets/algorithm-effects/insulator-defects.jpg",
+    "alt": "定位绝缘子上的闪络、破损和缺片等异常位置。",
+    "caption": "定位绝缘子上的闪络、破损和缺片等异常位置。",
+    "sourceURL": "https://mdpi-res.com/drones/drones-08-00431/article_deploy/html/images/drones-08-00431-g013-550.jpg",
+    "license": "CC-BY-4.0",
+    "author": "Yang Lu, Dahua Li, Dong Li, Xuan Li, Qiang Gao and Xiao Yu (2024)",
+    "licensePath": "./assets/algorithm-effects/licenses/CC-BY-4.0.txt",
+    "derived": false,
+    "attributionURL": "https://doi.org/10.3390/drones8090431"
+  },
+  {
+    "id": "5-2",
+    "src": "./assets/algorithm-effects/helmet-demo.gif",
+    "alt": "标出作业人员头部的安全帽佩戴情况。",
+    "caption": "标出作业人员头部的安全帽佩戴情况。",
+    "sourceURL": "https://github.com/user-attachments/assets/47aacd50-89f1-4fb2-861c-adc648bdc201",
+    "license": "MIT",
+    "author": "BUAksakal / HelmGuard",
+    "licensePath": "./assets/algorithm-effects/licenses/HELMET-MIT.txt",
+    "derived": false,
+    "note": "Original GIF preserved, including visible application branding."
+  },
+  {
+    "id": "5-3",
+    "src": "./assets/algorithm-effects/weld-defects.png",
+    "alt": "在焊缝影像中标记缺陷位置，并提取缺陷轮廓。",
+    "caption": "在焊缝影像中标记缺陷位置，并提取缺陷轮廓。",
+    "sourceURL": "https://raw.githubusercontent.com/maxkferg/metal-defect-detection/master/assets/weld-defects.png",
+    "license": "NIST permission notice",
+    "author": "Max Ferguson et al., Stanford Engineering Informatics Group and NIST",
+    "licensePath": "./assets/algorithm-effects/licenses/NIST-METAL-DEFECTS.txt",
+    "derived": false,
+    "note": "Original figure retains authors’ Ours/Ground Truth labels. No watermark removal or crop."
+  },
+  {
+    "id": "5-5",
+    "src": "./assets/cases/crack-input.jpg",
+    "secondSrc": "./assets/cases/crack-mask.jpg",
+    "alt": "道路原图与裂缝分割掩膜对照。",
+    "caption": "从路面图像中提取裂缝轮廓，输出像素级分割结果。",
+    "sourceURL": "https://lp0913.github.io/algorithm-studio/assets/cases/crack-input.jpg",
+    "secondSourceURL": "https://lp0913.github.io/algorithm-studio/assets/cases/crack-mask.jpg",
+    "attributionURL": "https://doi.org/10.3390/s23031127",
+    "license": "CC-BY-4.0",
+    "licensePath": "./assets/algorithm-effects/licenses/CC-BY-4.0.txt",
+    "author": "Fan Zhao, Yu Chao and Linyun Li (2023)",
+    "derived": true,
+    "note": "Existing website crops from original Fig.10. Full figure preserved at ./assets/cases/crack.png. Existing assets/cases/NOTICE.md preserves attribution."
+  }
+]

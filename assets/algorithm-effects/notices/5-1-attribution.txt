@@ -1,0 +1,14 @@
+id: 5-1
+src: ./assets/algorithm-effects/pv-thermal-defects-confirmed.jpg
+alt: 光伏组件缺陷的红外、灰度与伪彩色分析对照
+caption: 通过红外与图像处理结果定位组件热点，辅助复核故障单元。
+sourceURL: https://mdpi-res.com/applsci/applsci-11-01835/article_deploy/html/images/applsci-11-01835-g006-550.jpg
+sourcePage: https://www.mdpi.com/2076-3417/11/4/1835
+author: Kuo-Chien Liao and Jau-Huai Lu
+license: CC BY 4.0
+figure: Figure 6
+licenseEvidence: © 2021 by the authors. Licensee MDPI. Article states CC BY 4.0.
+licenseURL: https://creativecommons.org/licenses/by/4.0/
+licenseFile: ./assets/algorithm-effects/notices/CC-BY-4.0-legalcode.txt
+changes: None; original figure preserved with labels.
+sha256: 886aac45a4b954b400baf4ebfcde5e4dfad4b7d6426dc09c7eed53ab52ffc6e2

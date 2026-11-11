@@ -1,0 +1,14 @@
+id: 4-5
+src: ./assets/algorithm-effects/floating-trash.jpg
+alt: 水面漂浮瓶类垃圾的检测结果，检测框标出了目标位置
+caption: 定位水面漂浮垃圾，标记目标类别与位置。
+sourceURL: https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-024-55051-3/MediaObjects/41598_2024_55051_Fig10_HTML.jpg
+sourcePage: https://www.nature.com/articles/s41598-024-55051-3
+author: Luya Chen and Jianping Zhu
+license: CC BY 4.0
+figure: Figure 10
+licenseEvidence: Article Rights and permissions section explicitly includes article images unless individually credited otherwise.
+licenseURL: https://creativecommons.org/licenses/by/4.0/
+licenseFile: ./assets/algorithm-effects/notices/CC-BY-4.0-legalcode.txt
+changes: None; original figure preserved with labels.
+sha256: 46f7db644394a303c946daa4683280458fa9d2660772dc8ffb8c72adaecc03f0

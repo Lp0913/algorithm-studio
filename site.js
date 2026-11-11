@@ -170,14 +170,11 @@ const algorithmDetails = {
     "description": "从卫星或航拍影像中提取建筑物轮廓，形成建筑分布结果。",
     "input": "卫星或航拍影像",
     "output": "建筑物轮廓与位置",
-    "example": {
-      "name": "Looking Glass · 建筑物分割",
-      "repository": "developmentseed/looking-glass-pub",
-      "repositoryUrl": "https://github.com/developmentseed/looking-glass-pub",
-      "exampleUrl": "https://github.com/developmentseed/looking-glass-pub/blob/master/docker_pred_example.ipynb",
-      "summary": "用 DeepLabV3+ 将卫星影像分成建筑与背景，提供预测 Notebook 与边界距离输出。",
-      "requirements": "按仓库准备 TensorFlow 环境、卫星瓦片和预训练模型。",
-      "license": "MIT"
+    "application": "城市底图更新、建筑资源调查、园区资产管理",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/building.jpg",
+      "alt": "建筑影像、参考标注与建筑预测掩膜对照",
+      "caption": "将建筑从背景中分离，输出可查看的区域掩膜。"
     }
   },
   "0-1": {
@@ -185,14 +182,11 @@ const algorithmDetails = {
     "description": "根据影像中的边界与纹理划分地块，辅助地块调查与管理。",
     "input": "遥感影像",
     "output": "地块边界与分布",
-    "example": {
-      "name": "FTW · 农田地块边界",
-      "repository": "fieldsoftheworld/ftw-baselines",
-      "repositoryUrl": "https://github.com/fieldsoftheworld/ftw-baselines",
-      "exampleUrl": "https://github.com/fieldsoftheworld/ftw-baselines/blob/main/README.md",
-      "summary": "提供农田边界分割的基线模型、训练配置与推理工具，输出地块边界结果。",
-      "requirements": "使用 ftw-tools，按说明下载样本和对应模型权重。",
-      "license": "MIT"
+    "application": "地块调查、农业地块管理、用地范围统计",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/field-segmentation.jpg",
+      "alt": "农田影像与地块语义及实例分割结果对照",
+      "caption": "区分相邻地块，输出地块范围与独立边界。"
     }
   },
   "0-2": {
@@ -200,14 +194,11 @@ const algorithmDetails = {
     "description": "识别河流、湖泊等水域，提取水体范围与边界。",
     "input": "遥感影像",
     "output": "水体范围与边界",
-    "example": {
-      "name": "eo-learn · 水体监测",
-      "repository": "sentinel-hub/eo-learn",
-      "repositoryUrl": "https://github.com/sentinel-hub/eo-learn",
-      "exampleUrl": "https://github.com/sentinel-hub/eo-learn/blob/master/README.md",
-      "summary": "示例将卫星影像处理成水体掩膜，并统计水面范围，展示完整处理链。",
-      "requirements": "部分示例需要 Sentinel Hub 账号与影像访问配置。",
-      "license": "MIT"
+    "application": "水域调查、水面变化监测、河湖巡查",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/water-segmentation.jpg",
+      "alt": "水体影像、参考掩膜与预测掩膜对照。",
+      "caption": "对遥感影像中的水域进行像素级分割，输出水体范围与边界。"
     }
   },
   "0-3": {
@@ -215,14 +206,11 @@ const algorithmDetails = {
     "description": "识别影像中的林地覆盖范围，辅助森林资源调查。",
     "input": "遥感影像",
     "output": "林地范围与分布",
-    "example": {
-      "name": "Dynamic World · 林木覆盖",
-      "repository": "google/dynamicworld",
-      "repositoryUrl": "https://github.com/google/dynamicworld",
-      "exampleUrl": "https://github.com/google/dynamicworld/blob/master/single_image_runner.ipynb",
-      "summary": "运行九类土地覆盖模型，从 trees 类别概率或标签中提取林木覆盖区域。",
-      "requirements": "需要 TensorFlow 与符合模型波段要求的 Sentinel-2 数据。",
-      "license": "Apache-2.0"
+    "application": "森林资源调查、林地覆盖统计、生态监测",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/tree-species.jpg",
+      "alt": "包含林木类别与草地等地物的像素级分类结果。",
+      "caption": "以像素级分类呈现林木覆盖与树种空间分布。"
     }
   },
   "0-4": {
@@ -230,14 +218,11 @@ const algorithmDetails = {
     "description": "提取农业大棚的位置与轮廓，辅助设施农业调查。",
     "input": "高分辨率遥感影像",
     "output": "大棚轮廓与分布",
-    "example": {
-      "name": "U-Net · 农业大棚提取",
-      "repository": "LFilipePacheco/greenhouse-detection-unet",
-      "repositoryUrl": "https://github.com/LFilipePacheco/greenhouse-detection-unet",
-      "exampleUrl": "https://github.com/LFilipePacheco/greenhouse-detection-unet/blob/main/README.md",
-      "summary": "包含大棚影像分割、训练与推理流程，并展示提取轮廓覆盖在原图上的结果。",
-      "requirements": "使用 TensorFlow、rasterio 和 GeoPandas，按说明准备影像与标注。",
-      "license": "MIT"
+    "application": "设施农业调查、大棚分布统计、农业用地管理",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/greenhouse.jpg",
+      "alt": "农业大棚提取轮廓叠加在航拍影像上",
+      "caption": "用轮廓标出集中分布的农业大棚，便于核查位置与覆盖范围。"
     }
   },
   "0-5": {
@@ -245,14 +230,11 @@ const algorithmDetails = {
     "description": "识别集中式与分布式光伏区域，提取设施的位置与范围。",
     "input": "高分辨率遥感影像",
     "output": "光伏区域轮廓与位置",
-    "example": {
-      "name": "DeepSolar · 光伏设施识别",
-      "repository": "wangzhecheng/DeepSolar",
-      "repositoryUrl": "https://github.com/wangzhecheng/DeepSolar",
-      "exampleUrl": "https://github.com/wangzhecheng/DeepSolar/blob/master/README.md",
-      "summary": "从高分辨率影像中识别光伏设施，仓库提供模型训练、定位与结果整理流程。",
-      "requirements": "需按项目说明准备训练影像、标签和相应的 TensorFlow 环境。",
-      "license": "MIT"
+    "application": "光伏资源调查、设施分布统计、能源资产管理",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/solar-panel-detection-segmentation.jpg",
+      "alt": "光伏影像、参考掩膜和预测分割结果对照",
+      "caption": "从影像中分离光伏组件区域，输出对应的分割掩膜。"
     }
   },
   "1-0": {
@@ -260,14 +242,11 @@ const algorithmDetails = {
     "description": "识别图像或视频中的无人机目标，标记目标位置。",
     "input": "图像或视频帧",
     "output": "无人机类别与位置",
-    "example": {
-      "name": "Anti-UAV · 无人机目标定位",
-      "repository": "ZhaoJ9014/Anti-UAV",
-      "repositoryUrl": "https://github.com/ZhaoJ9014/Anti-UAV",
-      "exampleUrl": "https://github.com/ZhaoJ9014/Anti-UAV/blob/master/README.md",
-      "summary": "提供可见光与红外无人机目标的跟踪基线、数据说明和评估代码。",
-      "requirements": "根据所选基线下载 Anti-UAV 数据与模型，检测和持续跟踪任务需区分。",
-      "license": "MIT"
+    "application": "空域目标观察、低空巡查、无人机目标定位",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/uav.jpg",
+      "alt": "红外与可见光无人机目标跟踪画面",
+      "caption": "在连续画面中定位无人机目标并持续跟踪位置。"
     }
   },
   "1-1": {
@@ -275,14 +254,11 @@ const algorithmDetails = {
     "description": "检测影像中的飞机目标，形成位置标注。",
     "input": "航空或卫星影像",
     "output": "飞机目标位置",
-    "example": {
-      "name": "MMRotate · 飞机旋转框检测",
-      "repository": "open-mmlab/mmrotate",
-      "repositoryUrl": "https://github.com/open-mmlab/mmrotate",
-      "exampleUrl": "https://github.com/open-mmlab/mmrotate/blob/main/README.md",
-      "summary": "DOTA 类别包含 plane，可使用仓库配置训练并展示飞机目标的旋转框检测。",
-      "requirements": "需准备 DOTA 数据、对应配置与模型权重，以及匹配的 MMRotate 环境。",
-      "license": "Apache-2.0"
+    "application": "机场设施调查、航空影像解译、飞机目标统计",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/dota-rotated-detections.jpg",
+      "alt": "遥感目标检测图中下方的飞机检测结果",
+      "caption": "用旋转检测框标出飞机位置与朝向。"
     }
   },
   "1-2": {
@@ -290,14 +266,11 @@ const algorithmDetails = {
     "description": "从海面、港口等场景影像中检测舰船目标。",
     "input": "卫星或航拍影像",
     "output": "舰船目标位置",
-    "example": {
-      "name": "MMRotate · 舰船旋转框检测",
-      "repository": "open-mmlab/mmrotate",
-      "repositoryUrl": "https://github.com/open-mmlab/mmrotate",
-      "exampleUrl": "https://github.com/open-mmlab/mmrotate/blob/main/README.md",
-      "summary": "提供 DOTA 的 ship 类别与 HRSC 舰船数据支持，用于舰船旋转框检测实验。",
-      "requirements": "按仓库的数据准备说明选择 HRSC 或 DOTA 舰船样本与训练配置。",
-      "license": "Apache-2.0"
+    "application": "港口调查、海面目标观察、舰船分布统计",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/dota-rotated-detections.jpg",
+      "alt": "遥感目标检测图中右上方的舰船检测结果",
+      "caption": "沿舰船方向标出旋转检测框，区分密集停泊目标。"
     }
   },
   "1-3": {
@@ -305,14 +278,11 @@ const algorithmDetails = {
     "description": "识别画面中的火焰区域，为后续人工复核提供位置线索。",
     "input": "图像或视频帧",
     "output": "疑似火焰区域",
-    "example": {
-      "name": "YOLO · 火焰检测",
-      "repository": "spacewalk01/yolov5-fire-detection",
-      "repositoryUrl": "https://github.com/spacewalk01/yolov5-fire-detection",
-      "exampleUrl": "https://github.com/spacewalk01/yolov5-fire-detection/blob/main/README.md",
-      "summary": "提供火焰图像训练说明和视频检测示例，输出画面中的火焰检测框。",
-      "requirements": "下载项目注明的权重或用火焰标注数据训练，依赖版本按仓库设置。",
-      "license": "MIT"
+    "application": "现场视频巡查、火情线索发现、重点区域复核",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/fire-detection.jpg",
+      "alt": "多种场景中的火焰检测框结果",
+      "caption": "标出疑似火焰区域，提供位置与类别线索。"
     }
   },
   "1-4": {
@@ -320,14 +290,11 @@ const algorithmDetails = {
     "description": "在连续视频帧中关联车辆，记录同一目标的运动轨迹。",
     "input": "连续视频帧",
     "output": "车辆位置、标识与轨迹",
-    "example": {
-      "name": "Norfair · 车辆持续追踪",
-      "repository": "tryolabs/norfair",
-      "repositoryUrl": "https://github.com/tryolabs/norfair",
-      "exampleUrl": "https://github.com/tryolabs/norfair/blob/master/README.md",
-      "summary": "将目标检测结果关联为车辆轨迹，仓库包含交通视频演示与运行示例。",
-      "requirements": "需要目标检测器、Norfair 和输入视频，按示例配置检测模型。",
-      "license": "BSD-3-Clause"
+    "application": "交通流观察、车辆轨迹分析、道路运行统计",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/traffic-tracking.jpg",
+      "alt": "道路车辆检测标识与连续运动轨迹",
+      "caption": "为同一辆车关联标识，观察跨帧位置与运动轨迹。"
     }
   },
   "1-5": {
@@ -335,14 +302,11 @@ const algorithmDetails = {
     "description": "识别影像中的桥梁目标，辅助设施调查与定位。",
     "input": "遥感或航拍影像",
     "output": "桥梁目标位置",
-    "example": {
-      "name": "MMRotate · 桥梁目标检测",
-      "repository": "open-mmlab/mmrotate",
-      "repositoryUrl": "https://github.com/open-mmlab/mmrotate",
-      "exampleUrl": "https://github.com/open-mmlab/mmrotate/blob/main/README.md",
-      "summary": "DOTA 中包含 bridge 类别，可用旋转框检测配置训练和定位桥梁目标。",
-      "requirements": "需使用含桥梁标注的 DOTA 数据和匹配配置，遥感尺度需与训练数据对应。",
-      "license": "Apache-2.0"
+    "application": "交通设施调查、桥梁定位、基础设施管理",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/dota-rotated-detections.jpg",
+      "alt": "遥感目标检测图中右下方的桥梁检测结果",
+      "caption": "沿桥梁走向标出目标位置与覆盖范围。"
     }
   },
   "2-0": {
@@ -350,14 +314,11 @@ const algorithmDetails = {
     "description": "对比同一区域的不同时期影像，标出建筑新增、拆除等变化。",
     "input": "对齐的多期遥感影像",
     "output": "建筑变化区域",
-    "example": {
-      "name": "Open-CD · 建筑物变化检测",
-      "repository": "likyoo/open-cd",
-      "repositoryUrl": "https://github.com/likyoo/open-cd",
-      "exampleUrl": "https://github.com/likyoo/open-cd/blob/main/README.md",
-      "summary": "提供 LEVIR-CD 等双时相建筑变化数据的训练配置和评估流程。",
-      "requirements": "准备配准后的双期影像、变化标签以及对应配置和权重。",
-      "license": "Apache-2.0"
+    "application": "城市更新调查、建筑新增与拆除核查",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/building-height-13.jpg",
+      "alt": "同一区域双期建筑密度与高度变化分布图",
+      "caption": "用正负差值区分建筑密度与高度的变化区域。"
     }
   },
   "2-1": {
@@ -365,14 +326,12 @@ const algorithmDetails = {
     "description": "对比多期影像，定位地物覆盖发生变化的区域。",
     "input": "对齐的多期遥感影像",
     "output": "地物变化区域",
-    "example": {
-      "name": "Open-CD · 地物变化检测",
-      "repository": "likyoo/open-cd",
-      "repositoryUrl": "https://github.com/likyoo/open-cd",
-      "exampleUrl": "https://github.com/likyoo/open-cd/blob/main/README.md",
-      "summary": "支持 SECOND 等地物变化数据与变化检测模型，形成两期影像的变化区域。",
-      "requirements": "根据所选数据集准备双时相影像及标签，按仓库说明配置训练环境。",
-      "license": "Apache-2.0"
+    "application": "区域变化调查、用地变化复核、专题制图",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/vegas-1999.jpg",
+      "alt": "同一区域的两期卫星影像",
+      "caption": "对比两期影像，观察建成区扩展与水域范围变化。",
+      "secondSrc": "./assets/algorithm-effects/web/vegas-2024.jpg"
     }
   },
   "2-2": {
@@ -380,14 +339,11 @@ const algorithmDetails = {
     "description": "分析同一区域的连续观测，呈现目标随时间的变化趋势。",
     "input": "连续多期影像或观测数据",
     "output": "时序变化曲线与区域",
-    "example": {
-      "name": "sits · 卫星影像时序分析",
-      "repository": "e-sensing/sits",
-      "repositoryUrl": "https://github.com/e-sensing/sits",
-      "exampleUrl": "https://github.com/e-sensing/sits/blob/master/README.md",
-      "summary": "在 R 中组织卫星影像时间序列，进行样本分类、时序分析与结果制图。",
-      "requirements": "需要 R、sits 及可访问的时序影像数据，示例按数据立方配置执行。",
-      "license": "GPL-2.0"
+    "application": "区域发展观察、植被时序分析、长期变化统计",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/satellite-timeseries-map.jpg",
+      "alt": "NDVI 变化曲线与时间序列地表类别对照",
+      "caption": "沿时间轴查看植被指数变化及对应的地表覆盖类别。"
     }
   },
   "2-3": {
@@ -395,14 +351,11 @@ const algorithmDetails = {
     "description": "结合可用影像和空间信息，估计建筑物高度。",
     "input": "影像及可用空间信息",
     "output": "建筑物高度估计值",
-    "example": {
-      "name": "TEMPO · 建筑密度与高度",
-      "repository": "microsoft/buildings",
-      "repositoryUrl": "https://github.com/microsoft/buildings",
-      "exampleUrl": "https://github.com/microsoft/buildings/blob/main/README.md",
-      "summary": "提供建筑密度与高度估计的训练说明、推理代码和公开结果数据。",
-      "requirements": "复现实验需按训练说明准备数据，模型训练涉及 Planet 季度影像访问。",
-      "license": "MIT"
+    "application": "城市三维分析、建筑高度分布调查",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/building-height-0.jpg",
+      "alt": "建筑密度与建筑高度米制空间分布对照",
+      "caption": "以颜色呈现建筑高度估计值，查看空间分布与密度差异。"
     }
   },
   "2-4": {
@@ -410,14 +363,11 @@ const algorithmDetails = {
     "description": "结合地形、地物和项目约束，筛选光伏建设的候选区域。",
     "input": "遥感影像、地形与约束数据",
     "output": "候选区域与筛选结果",
-    "example": {
-      "name": "QGIS · 光伏选址分析",
-      "repository": "pperillav/solar_site_suitability",
-      "repositoryUrl": "https://github.com/pperillav/solar_site_suitability",
-      "exampleUrl": "https://github.com/pperillav/solar_site_suitability/blob/main/README.md",
-      "summary": "通过坡度、朝向、太阳辐照与土地覆盖进行 AHP 多指标评价，提取候选区域。",
-      "requirements": "需要 QGIS、DEM、土地覆盖和辐照数据，并设置项目的筛选约束。",
-      "license": "GPL-3.0"
+    "application": "候选区域筛选、光伏资源调查、建设条件评价",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/solar-site-suitability.jpg",
+      "alt": "光伏选址适宜性评分与候选地块",
+      "caption": "按适宜性评分区分区域，并勾勒候选建设地块。"
     }
   },
   "3-0": {
@@ -425,14 +375,11 @@ const algorithmDetails = {
     "description": "提高低分辨率影像的显示细节，为后续查看和分析提供输入。",
     "input": "低分辨率影像",
     "output": "超分辨率影像",
-    "example": {
-      "name": "Real-ESRGAN · 图像超分",
-      "repository": "xinntao/Real-ESRGAN",
-      "repositoryUrl": "https://github.com/xinntao/Real-ESRGAN",
-      "exampleUrl": "https://github.com/xinntao/Real-ESRGAN/blob/master/README.md",
-      "summary": "提供单张图像超分与推理示例，可观察增强前后的细节变化。",
-      "requirements": "下载对应模型权重并安装依赖，遥感影像的效果需用实际数据验证。",
-      "license": "BSD-3-Clause"
+    "application": "低分辨率影像处理、历史图像细节改善",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/super-resolution.jpg",
+      "alt": "超分辨率处理前后的图像细节对照。",
+      "caption": "超分辨率处理前后的图像细节对照。"
     }
   },
   "3-1": {
@@ -440,14 +387,11 @@ const algorithmDetails = {
     "description": "调整亮度、对比度等影像表现，改善数据的可读性。",
     "input": "待增强影像",
     "output": "增强后的影像",
-    "example": {
-      "name": "OpenCV · 对比度增强",
-      "repository": "opencv/opencv",
-      "repositoryUrl": "https://github.com/opencv/opencv",
-      "exampleUrl": "https://github.com/opencv/opencv/blob/4.x/doc/py_tutorials/py_imgproc/py_histograms/py_histogram_equalization/py_histogram_equalization.markdown",
-      "summary": "展示直方图均衡与 CLAHE 局部对比度增强，可对照处理前后的图像表现。",
-      "requirements": "安装 OpenCV 并准备输入图片，示例为图像增强方法演示。",
-      "license": "Apache-2.0"
+    "application": "低对比度图像处理、图像细节增强",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/contrast-enhancement.jpg",
+      "alt": "增强局部对比度，呈现暗部与细节信息。",
+      "caption": "增强局部对比度，呈现暗部与细节信息。"
     }
   },
   "3-2": {
@@ -455,14 +399,11 @@ const algorithmDetails = {
     "description": "对齐不同时间或来源的影像，为变化分析和数据融合做准备。",
     "input": "参考影像与待配准影像",
     "output": "对齐影像与配准参数",
-    "example": {
-      "name": "AROSICS · 遥感影像配准",
-      "repository": "GFZ/arosics",
-      "repositoryUrl": "https://github.com/GFZ/arosics",
-      "exampleUrl": "https://github.com/GFZ/arosics/blob/main/README.rst",
-      "summary": "提供遥感影像全局与局部配准流程，校正参考影像与目标影像的空间偏移。",
-      "requirements": "需准备有重叠范围的地理参考影像，并按说明安装 GDAL 等依赖。",
-      "license": "Apache-2.0"
+    "application": "多期影像对齐、多源数据融合准备",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/image-registration.jpg",
+      "alt": "对照配准前后地物边界的位置变化。",
+      "caption": "对照配准前后地物边界的位置变化。"
     }
   },
   "3-3": {
@@ -470,14 +411,11 @@ const algorithmDetails = {
     "description": "按目标或类别划分影像像素，形成区域级识别结果。",
     "input": "待分割影像",
     "output": "区域掩膜或分类图",
-    "example": {
-      "name": "MMSegmentation · 语义分割",
-      "repository": "open-mmlab/mmsegmentation",
-      "repositoryUrl": "https://github.com/open-mmlab/mmsegmentation",
-      "exampleUrl": "https://github.com/open-mmlab/mmsegmentation/blob/main/README.md",
-      "summary": "提供图像分割配置、推理演示与可视化，将图像划分为目标类别区域。",
-      "requirements": "下载与配置对应的模型权重，遥感专题任务需匹配标签与训练数据。",
-      "license": "Apache-2.0"
+    "application": "场景要素识别、目标区域划分、专题图制作",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/semantic-segmentation.jpg",
+      "alt": "按像素区分道路、车辆、建筑等区域。",
+      "caption": "按像素区分道路、车辆、建筑等区域。"
     }
   },
   "3-4": {
@@ -485,14 +423,11 @@ const algorithmDetails = {
     "description": "拼接多幅具有重叠区域的影像，形成连续覆盖的图像。",
     "input": "多幅重叠影像",
     "output": "拼接影像",
-    "example": {
-      "name": "OpenCV · 多图拼接",
-      "repository": "opencv/opencv",
-      "repositoryUrl": "https://github.com/opencv/opencv",
-      "exampleUrl": "https://github.com/opencv/opencv/blob/4.x/samples/python/stitching_detailed.py",
-      "summary": "详细拼接示例包含特征匹配、相机估计、接缝处理与多图融合。",
-      "requirements": "需要有重叠区域的图片，示例输出全景图，地理坐标处理需另行配置。",
-      "license": "Apache-2.0"
+    "application": "航拍图像拼接、区域影像整合",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/image-mosaic.jpg",
+      "alt": "多张重叠影像匹配后融合为连续画面。",
+      "caption": "多张重叠影像匹配后融合为连续画面。"
     }
   },
   "3-5": {
@@ -500,14 +435,13 @@ const algorithmDetails = {
     "description": "统一多幅影像的亮度与色彩表现，减少拼接处的视觉差异。",
     "input": "多幅待处理影像",
     "output": "色调一致的影像",
-    "example": {
-      "name": "OpenCV · 曝光补偿与融合",
-      "repository": "opencv/opencv",
-      "repositoryUrl": "https://github.com/opencv/opencv",
-      "exampleUrl": "https://github.com/opencv/opencv/blob/4.x/samples/python/stitching_detailed.py",
-      "summary": "拼接示例提供曝光补偿与融合步骤，可观察多幅图像接缝处亮度差异的处理。",
-      "requirements": "使用重叠图片运行 stitching_detailed 示例，并设置曝光补偿参数。",
-      "license": "Apache-2.0"
+    "application": "多幅图像色彩统一、拼接过渡优化",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/color-before.jpg",
+      "alt": "上图为补偿前，下图为曝光补偿后的拼接结果。",
+      "caption": "上图为补偿前，下图为曝光补偿后的拼接结果。",
+      "secondSrc": "./assets/algorithm-effects/web/color-after.jpg",
+      "secondAlt": "曝光补偿后的拼接画面。"
     }
   },
   "4-0": {
@@ -515,14 +449,11 @@ const algorithmDetails = {
     "description": "识别影像中的作物类别，呈现种植类型与空间分布。",
     "input": "遥感影像及标注样本",
     "output": "作物类别与分布",
-    "example": {
-      "name": "U-TAE / PaPs · 作物分类",
-      "repository": "VSainteuf/utae-paps",
-      "repositoryUrl": "https://github.com/VSainteuf/utae-paps",
-      "exampleUrl": "https://github.com/VSainteuf/utae-paps/blob/main/README.md",
-      "summary": "利用卫星时序影像进行农田语义与全景分割，PASTIS 标签对应作物类型。",
-      "requirements": "下载 PASTIS 数据与模型配置，在 PyTorch 环境中运行训练或推理。",
-      "license": "MIT"
+    "application": "种植结构调查、农作物分布统计、农业监测",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/crop-classification.jpg",
+      "alt": "以不同颜色区分作物类别，并提取农田地块边界。",
+      "caption": "以不同颜色区分作物类别，并提取农田地块边界。"
     }
   },
   "4-1": {
@@ -530,14 +461,11 @@ const algorithmDetails = {
     "description": "结合影像特征区分树木类别，辅助林业调查。",
     "input": "航拍或地面影像",
     "output": "树木类别与位置",
-    "example": {
-      "name": "DeepTreeAttention · 树种分类",
-      "repository": "weecology/DeepTreeAttention",
-      "repositoryUrl": "https://github.com/weecology/DeepTreeAttention",
-      "exampleUrl": "https://github.com/weecology/DeepTreeAttention/blob/main/README.md",
-      "summary": "针对 NEON 树种预测提供多模态数据处理、模型训练与结果分析流程。",
-      "requirements": "需按项目准备高光谱、RGB 和冠层高度等数据，并调整数据路径。",
-      "license": "MIT"
+    "application": "林业调查、树种分布分析、生态资源管理",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/tree-species.jpg",
+      "alt": "树种分类结果以不同颜色呈现树木类型及空间分布。",
+      "caption": "树种分类结果以不同颜色呈现树木类型及空间分布。"
     }
   },
   "4-2": {
@@ -545,14 +473,11 @@ const algorithmDetails = {
     "description": "识别作物或树木上的疑似病虫害表现，标出复核目标。",
     "input": "作物或树木图像",
     "output": "疑似病虫害类别与区域",
-    "example": {
-      "name": "Plant Disease · 叶片病害分类",
-      "repository": "darpanhh/plant-disease-detection",
-      "repositoryUrl": "https://github.com/darpanhh/plant-disease-detection",
-      "exampleUrl": "https://github.com/darpanhh/plant-disease-detection/blob/main/README.md",
-      "summary": "提供叶片疾病分类的训练 Notebook 与交互演示，覆盖病虫害识别中的病害分类。",
-      "requirements": "需安装 TensorFlow、下载项目模型并准备叶片图片，昆虫检测需另设任务。",
-      "license": "MIT（README 声明）"
+    "application": "农业巡查、叶片病害筛查、样本辅助复核",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/plant-disease-explainability.jpg",
+      "alt": "病叶原图、分类模型热图与热图叠加结果对照。",
+      "caption": "展示叶片病害分类结果的模型关注区域。"
     }
   },
   "4-3": {
@@ -560,14 +485,11 @@ const algorithmDetails = {
     "description": "检测画面中的羊只，辅助群体定位和数量统计。",
     "input": "图像或视频帧",
     "output": "羊只位置与计数",
-    "example": {
-      "name": "ICAERUS · 羊群检测与计数",
-      "repository": "ICAERUS-EU/UC3_Livestock_Monitoring",
-      "repositoryUrl": "https://github.com/ICAERUS-EU/UC3_Livestock_Monitoring",
-      "exampleUrl": "https://github.com/ICAERUS-EU/UC3_Livestock_Monitoring/blob/main/README.md",
-      "summary": "提供航拍羊只检测模型、视频计数脚本和示例数据，关联目标完成羊只统计。",
-      "requirements": "选择仓库中的模型版本，下载权重，并配置视频和计数区域。",
-      "license": "GPL-3.0"
+    "application": "牧场巡查、羊群目标统计、航拍监测",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/sheep-detection.jpg",
+      "alt": "在航拍画面中标出羊只位置，辅助群体计数。",
+      "caption": "在航拍画面中标出羊只位置，辅助群体计数。"
     }
   },
   "4-4": {
@@ -575,14 +497,11 @@ const algorithmDetails = {
     "description": "检测画面中的牛只，辅助群体定位和数量统计。",
     "input": "图像或视频帧",
     "output": "牛只位置与计数",
-    "example": {
-      "name": "Ultralytics · COCO 牛只检测",
-      "repository": "ultralytics/ultralytics",
-      "repositoryUrl": "https://github.com/ultralytics/ultralytics",
-      "exampleUrl": "https://github.com/ultralytics/ultralytics/blob/main/docs/en/datasets/detect/coco.md",
-      "summary": "COCO 模型包含 cow 类别，可对牛群图片执行检测并按类别筛选目标。",
-      "requirements": "使用 COCO 预训练权重与牛群图片，航拍或遮挡场景需专门验证与适配。",
-      "license": "AGPL-3.0"
+    "application": "牧场巡查、牛群目标定位、养殖统计",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/cow-detection.jpg",
+      "alt": "在牧场影像中标出牛只的位置。",
+      "caption": "在牧场影像中标出牛只的位置。"
     }
   },
   "4-5": {
@@ -590,14 +509,11 @@ const algorithmDetails = {
     "description": "识别水面的疑似漂浮垃圾，为清理与巡查提供位置线索。",
     "input": "水面巡查图像或视频",
     "output": "疑似垃圾位置与类别",
-    "example": {
-      "name": "A2ANet · 水面漂浮垃圾",
-      "repository": "badamsbadiu/A2ANet-Floating-Debris-Detection",
-      "repositoryUrl": "https://github.com/badamsbadiu/A2ANet-Floating-Debris-Detection",
-      "exampleUrl": "https://github.com/badamsbadiu/A2ANet-Floating-Debris-Detection/blob/main/README.md",
-      "summary": "提供面向 D_six 与 FloW-Img 的漂浮垃圾检测模型、数据配置及训练验证流程。",
-      "requirements": "需下载相应数据集并训练权重，仓库 README 注明权重另行发布安排。",
-      "license": "MIT（README 声明）"
+    "application": "河湖巡查、漂浮物定位、清理作业辅助",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/floating-trash.jpg",
+      "alt": "水面漂浮瓶类垃圾的检测结果，检测框标出了目标位置",
+      "caption": "定位水面漂浮垃圾，标记目标类别与位置。"
     }
   },
   "5-0": {
@@ -605,14 +521,11 @@ const algorithmDetails = {
     "description": "分析输电线路巡检影像，标出疑似设施隐患与周边风险。",
     "input": "输电线路巡检影像",
     "output": "疑似隐患位置与类别",
-    "example": {
-      "name": "TLINet · 绝缘子缺陷检测",
-      "repository": "mazilishang/TLINet",
-      "repositoryUrl": "https://github.com/mazilishang/TLINet",
-      "exampleUrl": "https://github.com/mazilishang/TLINet/blob/main/README.md",
-      "summary": "针对输电线路绝缘子缺陷提供模型和实验流程，覆盖线路巡检中的设备隐患识别。",
-      "requirements": "按仓库说明准备绝缘子数据、标签与模型配置。",
-      "license": "Apache-2.0"
+    "application": "输电设施巡检、绝缘子缺陷复核、线路维护",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/insulator-defects.jpg",
+      "alt": "定位绝缘子上的闪络、破损和缺片等异常位置。",
+      "caption": "定位绝缘子上的闪络、破损和缺片等异常位置。"
     }
   },
   "5-1": {
@@ -620,14 +533,11 @@ const algorithmDetails = {
     "description": "分析可见光或热成像数据，标出疑似光伏组件缺陷。",
     "input": "光伏巡检图像",
     "output": "疑似缺陷区域与类别",
-    "example": {
-      "name": "Solar Panel · 光伏缺陷检测",
-      "repository": "yugeshsivakumar/Solar-Panel-Defect-Detection",
-      "repositoryUrl": "https://github.com/yugeshsivakumar/Solar-Panel-Defect-Detection",
-      "exampleUrl": "https://github.com/yugeshsivakumar/Solar-Panel-Defect-Detection/blob/main/README.md",
-      "summary": "提供可见光和热成像光伏缺陷的预处理、训练与检测 Notebook。",
-      "requirements": "示例数据需向作者申请或自行准备，环境按对应图像分支配置。",
-      "license": "MIT"
+    "application": "光伏组件巡检、疑似缺陷定位、运维辅助",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/pv-thermal-defects-confirmed.jpg",
+      "alt": "光伏组件缺陷的红外、灰度与伪彩色分析对照",
+      "caption": "通过红外与图像处理结果定位组件热点，辅助复核故障单元。"
     }
   },
   "5-2": {
@@ -635,14 +545,11 @@ const algorithmDetails = {
     "description": "检测作业人员及安全帽佩戴情况，标出需要复核的目标。",
     "input": "作业现场图像或视频",
     "output": "人员位置与佩戴识别结果",
-    "example": {
-      "name": "Construction-PPE · 安全帽识别",
-      "repository": "ultralytics/ultralytics",
-      "repositoryUrl": "https://github.com/ultralytics/ultralytics",
-      "exampleUrl": "https://github.com/ultralytics/ultralytics/blob/main/docs/en/datasets/detect/construction-ppe.md",
-      "summary": "官方示例包含 helmet 与 no_helmet 类别，提供训练、验证与推理用法。",
-      "requirements": "使用 Construction-PPE 数据配置，下载数据并训练或加载匹配权重。",
-      "license": "AGPL-3.0"
+    "application": "作业现场巡查、安全帽佩戴识别",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/helmet-demo.jpg",
+      "alt": "标出作业人员头部的安全帽佩戴情况。",
+      "caption": "标出作业人员头部的安全帽佩戴情况。"
     }
   },
   "5-3": {
@@ -650,14 +557,11 @@ const algorithmDetails = {
     "description": "识别焊接件图像中的疑似缺陷，辅助工业质量检查。",
     "input": "焊接件检测图像",
     "output": "疑似缺陷位置与类别",
-    "example": {
-      "name": "GDXray · 焊缝缺陷分支",
-      "repository": "maxkferg/metal-defect-detection",
-      "repositoryUrl": "https://github.com/maxkferg/metal-defect-detection",
-      "exampleUrl": "https://github.com/maxkferg/metal-defect-detection/blob/master/gdxray.py",
-      "summary": "gdxray.py 包含 Welding 数据加载与检测类别，可用于焊缝 X 光缺陷训练实验。",
-      "requirements": "该项目使用较早的 Python 与 Mask R-CNN 环境，需准备焊缝数据并训练权重。",
-      "license": "NIST 使用许可"
+    "application": "焊接质量检查、X 光图像分析、缺陷辅助复核",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/weld-defects.jpg",
+      "alt": "在焊缝影像中标记缺陷位置，并提取缺陷轮廓。",
+      "caption": "在焊缝影像中标记缺陷位置，并提取缺陷轮廓。"
     }
   },
   "5-4": {
@@ -665,14 +569,11 @@ const algorithmDetails = {
     "description": "分析齿轮表面图像，标出疑似瑕疵区域。",
     "input": "齿轮表面图像",
     "output": "疑似瑕疵区域",
-    "example": {
-      "name": "Gear Defects · 齿轮表面检测",
-      "repository": "Yuli-Ya/Detecting-Gear-Surface-Defects",
-      "repositoryUrl": "https://github.com/Yuli-Ya/Detecting-Gear-Surface-Defects",
-      "exampleUrl": "https://github.com/Yuli-Ya/Detecting-Gear-Surface-Defects/blob/master/README.md",
-      "summary": "提供齿轮缺陷实验流程，针对断裂、缺损、划痕和正常样本进行 YOLOv3 训练。",
-      "requirements": "按 README 准备齿轮图片与标签，并配置 Darknet、类别与预训练权重。",
-      "license": "MIT"
+    "application": "齿轮表面检查、缺损与划痕识别",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/gear-defects.jpg",
+      "alt": "不同转角下齿轮表面暗斑缺陷的检测结果",
+      "caption": "在不同角度的齿轮表面标记暗斑缺陷位置。"
     }
   },
   "5-5": {
@@ -680,14 +581,12 @@ const algorithmDetails = {
     "description": "提取道路表面的裂缝位置与轮廓，辅助路面巡检。",
     "input": "路面图像",
     "output": "裂缝轮廓或分割掩膜",
-    "example": {
-      "name": "U-Net · 道路裂缝分割",
-      "repository": "yakhyo/Crack-Segmentation",
-      "repositoryUrl": "https://github.com/yakhyo/Crack-Segmentation",
-      "exampleUrl": "https://github.com/yakhyo/Crack-Segmentation/blob/main/README.md",
-      "summary": "使用 PyTorch U-Net 提取道路裂缝掩膜，提供损失函数、训练与推理实现。",
-      "requirements": "准备道路裂缝图像、像素标注与匹配权重，按仓库说明运行训练或分割。",
-      "license": "MIT"
+    "application": "道路养护巡查、路面病害定位、裂缝轮廓提取",
+    "visual": {
+      "src": "./assets/algorithm-effects/web/crack-input.jpg",
+      "alt": "道路原图与裂缝分割掩膜对照。",
+      "caption": "从路面图像中提取裂缝轮廓，输出像素级分割结果。",
+      "secondSrc": "./assets/algorithm-effects/web/crack-mask.jpg"
     }
   }
 };
@@ -722,26 +621,38 @@ function selectAlgorithm(panel, link) {
 
 function openAlgorithmWindow(panel, link) {
  const details = algorithmDetails[link.dataset.algorithm];
- const example = details.example;
+ const visual = details.visual;
  const category = $(panel.getAttribute('aria-labelledby')).querySelector('span:nth-child(2)').textContent;
  $('algorithm-breadcrumb').textContent = category + ' / 算法详情';
  $('algorithm-title').textContent = details.title;
  $('algorithm-description').textContent = details.description;
  $('algorithm-input').textContent = details.input;
  $('algorithm-output').textContent = details.output;
- $('algorithm-example-title').textContent = example.name;
- $('algorithm-example-summary').textContent = example.summary;
- $('algorithm-example-requirements').textContent = example.requirements;
- $('algorithm-license').textContent = example.license;
- $('algorithm-example-link').href = example.exampleUrl;
- $('algorithm-repository-link').href = example.repositoryUrl;
- $('algorithm-example-credit').textContent = example.repository + ' · 来源已核对';
+ $('algorithm-application').textContent = details.application;
+ const image = $('algorithm-effect-image');
+ image.src = visual.src;
+ image.alt = visual.alt;
+ const second = $('algorithm-effect-second');
+ second.hidden = !visual.secondSrc;
+ if (visual.secondSrc) {
+  second.src = visual.secondSrc;
+  second.alt = visual.secondAlt;
+ } else {
+  second.removeAttribute('src');
+ }
+ $('algorithm-effect-caption').textContent = visual.caption;
  algorithmDialog.dataset.hash = link.hash;
  algorithmDialog.dataset.category = panel.getAttribute('aria-labelledby');
  if (!algorithmDialog.open) algorithmDialog.showModal();
 }
 
 $('algorithm-close').addEventListener('click', () => algorithmDialog.close());
+$('algorithm-contact').addEventListener('click', event => {
+ event.preventDefault();
+ setDirectoryHash('#contact');
+ algorithmDialog.close();
+ $('contact').scrollIntoView();
+});
 algorithmDialog.addEventListener('click', event => {
  if (event.target === algorithmDialog) algorithmDialog.close();
 });
@@ -863,10 +774,6 @@ screeningButtons.forEach(button => {
   screeningVideo.setAttribute('aria-label', media.title);
   $('screening-title').textContent = media.title;
   $('screening-description').textContent = media.desc;
-  $('screening-source').href = media.source_page;
-  $('screening-source').textContent = media.repo + ' ↗';
-  $('screening-license').href = './assets/github/' + media.license_file;
-  $('screening-license').textContent = media.license;
   const playerBounds = screeningVideo.getBoundingClientRect();
   const headerBottom = document.querySelector('.masthead').getBoundingClientRect().bottom;
   if (playerBounds.bottom <= headerBottom || playerBounds.top >= innerHeight) {

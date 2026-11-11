@@ -1,0 +1,317 @@
+{
+  "0-0": {
+    "name": "Looking Glass · 建筑物分割",
+    "repository": "developmentseed/looking-glass-pub",
+    "repositoryUrl": "https://github.com/developmentseed/looking-glass-pub",
+    "exampleUrl": "https://github.com/developmentseed/looking-glass-pub/blob/master/docker_pred_example.ipynb",
+    "summary": "用 DeepLabV3+ 将卫星影像分成建筑与背景，提供预测 Notebook 与边界距离输出。",
+    "requirements": "按仓库准备 TensorFlow 环境、卫星瓦片和预训练模型。",
+    "license": "MIT"
+  },
+  "0-1": {
+    "name": "FTW · 农田地块边界",
+    "repository": "fieldsoftheworld/ftw-baselines",
+    "repositoryUrl": "https://github.com/fieldsoftheworld/ftw-baselines",
+    "exampleUrl": "https://github.com/fieldsoftheworld/ftw-baselines/blob/main/README.md",
+    "summary": "提供农田边界分割的基线模型、训练配置与推理工具，输出地块边界结果。",
+    "requirements": "使用 ftw-tools，按说明下载样本和对应模型权重。",
+    "license": "MIT"
+  },
+  "0-2": {
+    "name": "eo-learn · 水体监测",
+    "repository": "sentinel-hub/eo-learn",
+    "repositoryUrl": "https://github.com/sentinel-hub/eo-learn",
+    "exampleUrl": "https://github.com/sentinel-hub/eo-learn/blob/master/README.md",
+    "summary": "示例将卫星影像处理成水体掩膜，并统计水面范围，展示完整处理链。",
+    "requirements": "部分示例需要 Sentinel Hub 账号与影像访问配置。",
+    "license": "MIT"
+  },
+  "0-3": {
+    "name": "Dynamic World · 林木覆盖",
+    "repository": "google/dynamicworld",
+    "repositoryUrl": "https://github.com/google/dynamicworld",
+    "exampleUrl": "https://github.com/google/dynamicworld/blob/master/single_image_runner.ipynb",
+    "summary": "运行九类土地覆盖模型，从 trees 类别概率或标签中提取林木覆盖区域。",
+    "requirements": "需要 TensorFlow 与符合模型波段要求的 Sentinel-2 数据。",
+    "license": "Apache-2.0"
+  },
+  "0-4": {
+    "name": "U-Net · 农业大棚提取",
+    "repository": "LFilipePacheco/greenhouse-detection-unet",
+    "repositoryUrl": "https://github.com/LFilipePacheco/greenhouse-detection-unet",
+    "exampleUrl": "https://github.com/LFilipePacheco/greenhouse-detection-unet/blob/main/README.md",
+    "summary": "包含大棚影像分割、训练与推理流程，并展示提取轮廓覆盖在原图上的结果。",
+    "requirements": "使用 TensorFlow、rasterio 和 GeoPandas，按说明准备影像与标注。",
+    "license": "MIT"
+  },
+  "0-5": {
+    "name": "DeepSolar · 光伏设施识别",
+    "repository": "wangzhecheng/DeepSolar",
+    "repositoryUrl": "https://github.com/wangzhecheng/DeepSolar",
+    "exampleUrl": "https://github.com/wangzhecheng/DeepSolar/blob/master/README.md",
+    "summary": "从高分辨率影像中识别光伏设施，仓库提供模型训练、定位与结果整理流程。",
+    "requirements": "需按项目说明准备训练影像、标签和相应的 TensorFlow 环境。",
+    "license": "MIT"
+  },
+  "1-0": {
+    "name": "Anti-UAV · 无人机目标定位",
+    "repository": "ZhaoJ9014/Anti-UAV",
+    "repositoryUrl": "https://github.com/ZhaoJ9014/Anti-UAV",
+    "exampleUrl": "https://github.com/ZhaoJ9014/Anti-UAV/blob/master/README.md",
+    "summary": "提供可见光与红外无人机目标的跟踪基线、数据说明和评估代码。",
+    "requirements": "根据所选基线下载 Anti-UAV 数据与模型，检测和持续跟踪任务需区分。",
+    "license": "MIT"
+  },
+  "1-1": {
+    "name": "MMRotate · 飞机旋转框检测",
+    "repository": "open-mmlab/mmrotate",
+    "repositoryUrl": "https://github.com/open-mmlab/mmrotate",
+    "exampleUrl": "https://github.com/open-mmlab/mmrotate/blob/main/README.md",
+    "summary": "DOTA 类别包含 plane，可使用仓库配置训练并展示飞机目标的旋转框检测。",
+    "requirements": "需准备 DOTA 数据、对应配置与模型权重，以及匹配的 MMRotate 环境。",
+    "license": "Apache-2.0"
+  },
+  "1-2": {
+    "name": "MMRotate · 舰船旋转框检测",
+    "repository": "open-mmlab/mmrotate",
+    "repositoryUrl": "https://github.com/open-mmlab/mmrotate",
+    "exampleUrl": "https://github.com/open-mmlab/mmrotate/blob/main/README.md",
+    "summary": "提供 DOTA 的 ship 类别与 HRSC 舰船数据支持，用于舰船旋转框检测实验。",
+    "requirements": "按仓库的数据准备说明选择 HRSC 或 DOTA 舰船样本与训练配置。",
+    "license": "Apache-2.0"
+  },
+  "1-3": {
+    "name": "YOLO · 火焰检测",
+    "repository": "spacewalk01/yolov5-fire-detection",
+    "repositoryUrl": "https://github.com/spacewalk01/yolov5-fire-detection",
+    "exampleUrl": "https://github.com/spacewalk01/yolov5-fire-detection/blob/main/README.md",
+    "summary": "提供火焰图像训练说明和视频检测示例，输出画面中的火焰检测框。",
+    "requirements": "下载项目注明的权重或用火焰标注数据训练，依赖版本按仓库设置。",
+    "license": "MIT"
+  },
+  "1-4": {
+    "name": "Norfair · 车辆持续追踪",
+    "repository": "tryolabs/norfair",
+    "repositoryUrl": "https://github.com/tryolabs/norfair",
+    "exampleUrl": "https://github.com/tryolabs/norfair/blob/master/README.md",
+    "summary": "将目标检测结果关联为车辆轨迹，仓库包含交通视频演示与运行示例。",
+    "requirements": "需要目标检测器、Norfair 和输入视频，按示例配置检测模型。",
+    "license": "BSD-3-Clause"
+  },
+  "1-5": {
+    "name": "MMRotate · 桥梁目标检测",
+    "repository": "open-mmlab/mmrotate",
+    "repositoryUrl": "https://github.com/open-mmlab/mmrotate",
+    "exampleUrl": "https://github.com/open-mmlab/mmrotate/blob/main/README.md",
+    "summary": "DOTA 中包含 bridge 类别，可用旋转框检测配置训练和定位桥梁目标。",
+    "requirements": "需使用含桥梁标注的 DOTA 数据和匹配配置，遥感尺度需与训练数据对应。",
+    "license": "Apache-2.0"
+  },
+  "2-0": {
+    "name": "Open-CD · 建筑物变化检测",
+    "repository": "likyoo/open-cd",
+    "repositoryUrl": "https://github.com/likyoo/open-cd",
+    "exampleUrl": "https://github.com/likyoo/open-cd/blob/main/README.md",
+    "summary": "提供 LEVIR-CD 等双时相建筑变化数据的训练配置和评估流程。",
+    "requirements": "准备配准后的双期影像、变化标签以及对应配置和权重。",
+    "license": "Apache-2.0"
+  },
+  "2-1": {
+    "name": "Open-CD · 地物变化检测",
+    "repository": "likyoo/open-cd",
+    "repositoryUrl": "https://github.com/likyoo/open-cd",
+    "exampleUrl": "https://github.com/likyoo/open-cd/blob/main/README.md",
+    "summary": "支持 SECOND 等地物变化数据与变化检测模型，形成两期影像的变化区域。",
+    "requirements": "根据所选数据集准备双时相影像及标签，按仓库说明配置训练环境。",
+    "license": "Apache-2.0"
+  },
+  "2-2": {
+    "name": "sits · 卫星影像时序分析",
+    "repository": "e-sensing/sits",
+    "repositoryUrl": "https://github.com/e-sensing/sits",
+    "exampleUrl": "https://github.com/e-sensing/sits/blob/master/README.md",
+    "summary": "在 R 中组织卫星影像时间序列，进行样本分类、时序分析与结果制图。",
+    "requirements": "需要 R、sits 及可访问的时序影像数据，示例按数据立方配置执行。",
+    "license": "GPL-2.0"
+  },
+  "2-3": {
+    "name": "TEMPO · 建筑密度与高度",
+    "repository": "microsoft/buildings",
+    "repositoryUrl": "https://github.com/microsoft/buildings",
+    "exampleUrl": "https://github.com/microsoft/buildings/blob/main/README.md",
+    "summary": "提供建筑密度与高度估计的训练说明、推理代码和公开结果数据。",
+    "requirements": "复现实验需按训练说明准备数据，模型训练涉及 Planet 季度影像访问。",
+    "license": "MIT"
+  },
+  "2-4": {
+    "name": "QGIS · 光伏选址分析",
+    "repository": "pperillav/solar_site_suitability",
+    "repositoryUrl": "https://github.com/pperillav/solar_site_suitability",
+    "exampleUrl": "https://github.com/pperillav/solar_site_suitability/blob/main/README.md",
+    "summary": "通过坡度、朝向、太阳辐照与土地覆盖进行 AHP 多指标评价，提取候选区域。",
+    "requirements": "需要 QGIS、DEM、土地覆盖和辐照数据，并设置项目的筛选约束。",
+    "license": "GPL-3.0"
+  },
+  "3-0": {
+    "name": "Real-ESRGAN · 图像超分",
+    "repository": "xinntao/Real-ESRGAN",
+    "repositoryUrl": "https://github.com/xinntao/Real-ESRGAN",
+    "exampleUrl": "https://github.com/xinntao/Real-ESRGAN/blob/master/README.md",
+    "summary": "提供单张图像超分与推理示例，可观察增强前后的细节变化。",
+    "requirements": "下载对应模型权重并安装依赖，遥感影像的效果需用实际数据验证。",
+    "license": "BSD-3-Clause"
+  },
+  "3-1": {
+    "name": "OpenCV · 对比度增强",
+    "repository": "opencv/opencv",
+    "repositoryUrl": "https://github.com/opencv/opencv",
+    "exampleUrl": "https://github.com/opencv/opencv/blob/4.x/doc/py_tutorials/py_imgproc/py_histograms/py_histogram_equalization/py_histogram_equalization.markdown",
+    "summary": "展示直方图均衡与 CLAHE 局部对比度增强，可对照处理前后的图像表现。",
+    "requirements": "安装 OpenCV 并准备输入图片，示例为图像增强方法演示。",
+    "license": "Apache-2.0"
+  },
+  "3-2": {
+    "name": "AROSICS · 遥感影像配准",
+    "repository": "GFZ/arosics",
+    "repositoryUrl": "https://github.com/GFZ/arosics",
+    "exampleUrl": "https://github.com/GFZ/arosics/blob/main/README.rst",
+    "summary": "提供遥感影像全局与局部配准流程，校正参考影像与目标影像的空间偏移。",
+    "requirements": "需准备有重叠范围的地理参考影像，并按说明安装 GDAL 等依赖。",
+    "license": "Apache-2.0"
+  },
+  "3-3": {
+    "name": "MMSegmentation · 语义分割",
+    "repository": "open-mmlab/mmsegmentation",
+    "repositoryUrl": "https://github.com/open-mmlab/mmsegmentation",
+    "exampleUrl": "https://github.com/open-mmlab/mmsegmentation/blob/main/README.md",
+    "summary": "提供图像分割配置、推理演示与可视化，将图像划分为目标类别区域。",
+    "requirements": "下载与配置对应的模型权重，遥感专题任务需匹配标签与训练数据。",
+    "license": "Apache-2.0"
+  },
+  "3-4": {
+    "name": "OpenCV · 多图拼接",
+    "repository": "opencv/opencv",
+    "repositoryUrl": "https://github.com/opencv/opencv",
+    "exampleUrl": "https://github.com/opencv/opencv/blob/4.x/samples/python/stitching_detailed.py",
+    "summary": "详细拼接示例包含特征匹配、相机估计、接缝处理与多图融合。",
+    "requirements": "需要有重叠区域的图片，示例输出全景图，地理坐标处理需另行配置。",
+    "license": "Apache-2.0"
+  },
+  "3-5": {
+    "name": "OpenCV · 曝光补偿与融合",
+    "repository": "opencv/opencv",
+    "repositoryUrl": "https://github.com/opencv/opencv",
+    "exampleUrl": "https://github.com/opencv/opencv/blob/4.x/samples/python/stitching_detailed.py",
+    "summary": "拼接示例提供曝光补偿与融合步骤，可观察多幅图像接缝处亮度差异的处理。",
+    "requirements": "使用重叠图片运行 stitching_detailed 示例，并设置曝光补偿参数。",
+    "license": "Apache-2.0"
+  },
+  "4-0": {
+    "name": "U-TAE / PaPs · 作物分类",
+    "repository": "VSainteuf/utae-paps",
+    "repositoryUrl": "https://github.com/VSainteuf/utae-paps",
+    "exampleUrl": "https://github.com/VSainteuf/utae-paps/blob/main/README.md",
+    "summary": "利用卫星时序影像进行农田语义与全景分割，PASTIS 标签对应作物类型。",
+    "requirements": "下载 PASTIS 数据与模型配置，在 PyTorch 环境中运行训练或推理。",
+    "license": "MIT"
+  },
+  "4-1": {
+    "name": "DeepTreeAttention · 树种分类",
+    "repository": "weecology/DeepTreeAttention",
+    "repositoryUrl": "https://github.com/weecology/DeepTreeAttention",
+    "exampleUrl": "https://github.com/weecology/DeepTreeAttention/blob/main/README.md",
+    "summary": "针对 NEON 树种预测提供多模态数据处理、模型训练与结果分析流程。",
+    "requirements": "需按项目准备高光谱、RGB 和冠层高度等数据，并调整数据路径。",
+    "license": "MIT"
+  },
+  "4-2": {
+    "name": "Plant Disease · 叶片病害分类",
+    "repository": "darpanhh/plant-disease-detection",
+    "repositoryUrl": "https://github.com/darpanhh/plant-disease-detection",
+    "exampleUrl": "https://github.com/darpanhh/plant-disease-detection/blob/main/README.md",
+    "summary": "提供叶片疾病分类的训练 Notebook 与交互演示，覆盖病虫害识别中的病害分类。",
+    "requirements": "需安装 TensorFlow、下载项目模型并准备叶片图片，昆虫检测需另设任务。",
+    "license": "MIT（README 声明）"
+  },
+  "4-3": {
+    "name": "ICAERUS · 羊群检测与计数",
+    "repository": "ICAERUS-EU/UC3_Livestock_Monitoring",
+    "repositoryUrl": "https://github.com/ICAERUS-EU/UC3_Livestock_Monitoring",
+    "exampleUrl": "https://github.com/ICAERUS-EU/UC3_Livestock_Monitoring/blob/main/README.md",
+    "summary": "提供航拍羊只检测模型、视频计数脚本和示例数据，关联目标完成羊只统计。",
+    "requirements": "选择仓库中的模型版本，下载权重，并配置视频和计数区域。",
+    "license": "GPL-3.0"
+  },
+  "4-4": {
+    "name": "Ultralytics · COCO 牛只检测",
+    "repository": "ultralytics/ultralytics",
+    "repositoryUrl": "https://github.com/ultralytics/ultralytics",
+    "exampleUrl": "https://github.com/ultralytics/ultralytics/blob/main/docs/en/datasets/detect/coco.md",
+    "summary": "COCO 模型包含 cow 类别，可对牛群图片执行检测并按类别筛选目标。",
+    "requirements": "使用 COCO 预训练权重与牛群图片，航拍或遮挡场景需专门验证与适配。",
+    "license": "AGPL-3.0"
+  },
+  "4-5": {
+    "name": "A2ANet · 水面漂浮垃圾",
+    "repository": "badamsbadiu/A2ANet-Floating-Debris-Detection",
+    "repositoryUrl": "https://github.com/badamsbadiu/A2ANet-Floating-Debris-Detection",
+    "exampleUrl": "https://github.com/badamsbadiu/A2ANet-Floating-Debris-Detection/blob/main/README.md",
+    "summary": "提供面向 D_six 与 FloW-Img 的漂浮垃圾检测模型、数据配置及训练验证流程。",
+    "requirements": "需下载相应数据集并训练权重，仓库 README 注明权重另行发布安排。",
+    "license": "MIT（README 声明）"
+  },
+  "5-0": {
+    "name": "TLINet · 绝缘子缺陷检测",
+    "repository": "mazilishang/TLINet",
+    "repositoryUrl": "https://github.com/mazilishang/TLINet",
+    "exampleUrl": "https://github.com/mazilishang/TLINet/blob/main/README.md",
+    "summary": "针对输电线路绝缘子缺陷提供模型和实验流程，覆盖线路巡检中的设备隐患识别。",
+    "requirements": "按仓库说明准备绝缘子数据、标签与模型配置。",
+    "license": "Apache-2.0"
+  },
+  "5-1": {
+    "name": "Solar Panel · 光伏缺陷检测",
+    "repository": "yugeshsivakumar/Solar-Panel-Defect-Detection",
+    "repositoryUrl": "https://github.com/yugeshsivakumar/Solar-Panel-Defect-Detection",
+    "exampleUrl": "https://github.com/yugeshsivakumar/Solar-Panel-Defect-Detection/blob/main/README.md",
+    "summary": "提供可见光和热成像光伏缺陷的预处理、训练与检测 Notebook。",
+    "requirements": "示例数据需向作者申请或自行准备，环境按对应图像分支配置。",
+    "license": "MIT"
+  },
+  "5-2": {
+    "name": "Construction-PPE · 安全帽识别",
+    "repository": "ultralytics/ultralytics",
+    "repositoryUrl": "https://github.com/ultralytics/ultralytics",
+    "exampleUrl": "https://github.com/ultralytics/ultralytics/blob/main/docs/en/datasets/detect/construction-ppe.md",
+    "summary": "官方示例包含 helmet 与 no_helmet 类别，提供训练、验证与推理用法。",
+    "requirements": "使用 Construction-PPE 数据配置，下载数据并训练或加载匹配权重。",
+    "license": "AGPL-3.0"
+  },
+  "5-3": {
+    "name": "GDXray · 焊缝缺陷分支",
+    "repository": "maxkferg/metal-defect-detection",
+    "repositoryUrl": "https://github.com/maxkferg/metal-defect-detection",
+    "exampleUrl": "https://github.com/maxkferg/metal-defect-detection/blob/master/gdxray.py",
+    "summary": "gdxray.py 包含 Welding 数据加载与检测类别，可用于焊缝 X 光缺陷训练实验。",
+    "requirements": "该项目使用较早的 Python 与 Mask R-CNN 环境，需准备焊缝数据并训练权重。",
+    "license": "NIST 使用许可"
+  },
+  "5-4": {
+    "name": "Gear Defects · 齿轮表面检测",
+    "repository": "Yuli-Ya/Detecting-Gear-Surface-Defects",
+    "repositoryUrl": "https://github.com/Yuli-Ya/Detecting-Gear-Surface-Defects",
+    "exampleUrl": "https://github.com/Yuli-Ya/Detecting-Gear-Surface-Defects/blob/master/README.md",
+    "summary": "提供齿轮缺陷实验流程，针对断裂、缺损、划痕和正常样本进行 YOLOv3 训练。",
+    "requirements": "按 README 准备齿轮图片与标签，并配置 Darknet、类别与预训练权重。",
+    "license": "MIT"
+  },
+  "5-5": {
+    "name": "U-Net · 道路裂缝分割",
+    "repository": "yakhyo/Crack-Segmentation",
+    "repositoryUrl": "https://github.com/yakhyo/Crack-Segmentation",
+    "exampleUrl": "https://github.com/yakhyo/Crack-Segmentation/blob/main/README.md",
+    "summary": "使用 PyTorch U-Net 提取道路裂缝掩膜，提供损失函数、训练与推理实现。",
+    "requirements": "准备道路裂缝图像、像素标注与匹配权重，按仓库说明运行训练或分割。",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,14 @@
+id: 5-4
+src: ./assets/algorithm-effects/gear-defects.jpg
+alt: 不同转角下齿轮表面暗斑缺陷的检测结果
+caption: 在不同角度的齿轮表面标记暗斑缺陷位置。
+sourceURL: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/1aed/11281048/0c8fb17257d1/sensors-24-04660-g015.jpg
+sourcePage: https://pmc.ncbi.nlm.nih.gov/articles/PMC11281048/
+author: Zhaoyao Shi, Yiming Fang and Huixu Song
+license: CC BY 4.0
+figure: Figure 15
+licenseEvidence: © 2024 by the authors. Licensee MDPI. Article states CC BY 4.0.
+licenseURL: https://creativecommons.org/licenses/by/4.0/
+licenseFile: ./assets/algorithm-effects/notices/CC-BY-4.0-legalcode.txt
+changes: None; original figure preserved with labels.
+sha256: a737195a54350b323b107e136818bbeb370daba1708d5a4cd274690c6c463f36

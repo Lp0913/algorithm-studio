@@ -1,0 +1,41 @@
+[
+  {
+    "id": "0-2",
+    "src": "./assets/algorithm-effects/water-segmentation.png",
+    "alt": "水体影像、参考掩膜与预测掩膜对照。",
+    "caption": "对遥感影像中的水域进行像素级分割，输出水体范围与边界。",
+    "sourceURL": "https://raw.githubusercontent.com/busayojee/sat-water/main/assets/results/prediciton_unet.png",
+    "attributionURL": "https://github.com/busayojee/sat-water",
+    "license": "MIT",
+    "licensePath": "./assets/algorithm-effects/licenses/WATER-MIT.txt",
+    "author": "Busayo Alabi / busayojee",
+    "derived": false
+  },
+  {
+    "id": "0-3",
+    "src": "./assets/algorithm-effects/tree-species.png",
+    "alt": "包含林木类别与草地等地物的像素级分类结果。",
+    "caption": "以像素级分类呈现林木覆盖与树种空间分布。",
+    "sourceURL": "https://github.com/QiaosiLi/tree_species_classification/assets/140426435/cd7a7add-fb14-4983-bcfe-855451216ea2",
+    "attributionURL": "https://github.com/QiaosiLi/tree_species_classification",
+    "license": "MIT",
+    "licensePath": "./assets/algorithm-effects/licenses/TREE-SPECIES-MIT.txt",
+    "author": "Qiaosi Li, F. K. K. Wong and T. Fung",
+    "derived": false,
+    "note": "Reuses the verified result image from tree species classification. Its legend includes multiple tree species and Grass; caption must describe multi-class tree-cover classification, not a binary forest mask."
+  },
+  {
+    "id": "4-2",
+    "src": "./assets/algorithm-effects/plant-disease-explainability.webp",
+    "alt": "病叶原图、分类模型热图与热图叠加结果对照。",
+    "caption": "展示叶片病害分类结果的模型关注区域。",
+    "sourceURL": "https://www.frontiersin.org/files/Articles/1412988/xml-images/fpls-15-1412988-g012.webp",
+    "attributionURL": "https://doi.org/10.3389/fpls.2024.1412988",
+    "license": "CC-BY-4.0",
+    "licensePath": "./assets/algorithm-effects/licenses/CC-BY-4.0.txt",
+    "author": "R. H. Reazul Hasan Prince, Abdullah Al Mamun, Hasan Imam Peyal, Samin Miraz, Md. Nahiduzzaman, Amith Khandakar and Muhammad Abdul Manan Ayari (2024)",
+    "derived": false,
+    "visualKind": "classification-explanation",
+    "note": "Figure 12 from CSXAI. Real Grad-CAM model explanations, not pixel-accurate lesion masks. Complete original figure retained."
+  }
+]
