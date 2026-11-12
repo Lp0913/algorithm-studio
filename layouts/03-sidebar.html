@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>结构 03 · 控制台侧栏</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Syne:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./layouts.css">
+</head>
+<body class="L03">
+<aside class="side">
+  <div class="brand">志通达算法工作室<small>STUDIO CONSOLE</small></div>
+  <nav aria-label="侧栏导航">
+    <a class="is-on" href="#overview"><span>总览</span><span>01</span></a>
+    <a href="#caps"><span>能力目录</span><span>02</span></a>
+    <a href="#delivery"><span>交付项</span><span>03</span></a>
+    <a href="#contact"><span>商务合作</span><span>04</span></a>
+  </nav>
+  <p class="meta">LEFT NAV<br>CONTENT RIGHT<br>NO FULL-BLEED HERO</p>
+</aside>
+<main class="main" id="overview">
+  <div class="main-head">
+    <div>
+      <p style="margin:0 0 8px;font:500 11px/1 var(--mono);color:var(--muted);letter-spacing:.1em">WORKSPACE</p>
+      <h1>算法能力工作台</h1>
+    </div>
+    <p style="margin:0;max-width:22em;color:var(--muted);font-size:14px;line-height:1.6">左侧固定导航，右侧像产品控制台。适合强调“可运营的算法能力目录”。</p>
+  </div>
+  <div class="board">
+    <section class="panel">
+      <h2>今日焦点结果</h2>
+      <img src="../assets/algorithm-effects/web/building.jpg" alt="建筑物提取结果">
+    </section>
+    <section class="stats">
+      <div class="stat"><span style="font:500 11px var(--mono);color:var(--muted)">能力类目</span><b>06</b><span style="color:var(--muted);font-size:13px">地物 / 检测 / 变化 / 处理 / 农林 / 质检</span></div>
+      <div class="stat"><span style="font:500 11px var(--mono);color:var(--muted)">示例算法</span><b>35</b><span style="color:var(--muted);font-size:13px">可按场景定制与部署</span></div>
+      <div class="stat"><span style="font:500 11px var(--mono);color:var(--muted)">交付形态</span><b>3</b><span style="color:var(--muted);font-size:13px">结果 · 模型 · 接入</span></div>
+    </section>
+  </div>
+  <section id="caps">
+    <h2 style="margin:0 0 12px;font-size:18px">能力目录</h2>
+    <table class="table">
+      <thead><tr><th>编号</th><th>能力</th><th>输入</th><th>交付输出</th></tr></thead>
+      <tbody>
+        <tr><td>01</td><td>建筑物提取</td><td>卫星/航拍影像</td><td>轮廓与位置</td></tr>
+        <tr><td>02</td><td>舰船检测</td><td>港口遥感影像</td><td>旋转检测框</td></tr>
+        <tr><td>03</td><td>裂缝检测</td><td>路面图像</td><td>分割掩膜</td></tr>
+        <tr><td>04</td><td>车辆追踪</td><td>连续视频帧</td><td>轨迹与编号</td></tr>
+        <tr><td>05</td><td>光伏缺陷</td><td>巡检热成像</td><td>缺陷区域</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="delivery" style="margin-top:32px">
+    <h2 style="margin:0 0 12px;font-size:18px">交付项</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+      <div class="panel"><h2>可复核结果</h2><p style="margin:0;color:var(--muted);font-size:14px;line-height:1.6">标注、掩膜、位置清单。</p></div>
+      <div class="panel"><h2>现场模型</h2><p style="margin:0;color:var(--muted);font-size:14px;line-height:1.6">样本验证与指标评估。</p></div>
+      <div class="panel"><h2>系统接入</h2><p style="margin:0;color:var(--muted);font-size:14px;line-height:1.6">接口与部署方案。</p></div>
+    </div>
+  </section>
+  <div class="cta-row" id="contact">
+    <a href="mailto:biz@zhitongda.com">发起可行性评估</a>
+    <a class="ghost" href="./preview.html">返回结构对照</a>
+  </div>
+</main>
+<p class="layout-tag">03 控制台侧栏 · 左导航 + 右工作区 <a href="./preview.html">对照</a></p>
+</body>
+</html>

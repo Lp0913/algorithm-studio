@@ -1,11 +1,96 @@
 const $ = id => document.getElementById(id);
 
+/** 一处改联系方式，全站同步。占位信息，上线前换成真实值即可。 */
+const STUDIO = {
+ email: 'hello@ztd-algo.cn',
+ wechat: 'ztd_algo',
+ phone: '138-0000-8866',
+ mailSubject: '算法定制合作咨询',
+ mailBody: [
+  '您好，我们希望先做可行性评估：',
+  '1. 要识别/定位的目标：',
+  '2. 样本情况（可脱敏）：',
+  '3. 期望验收指标：',
+  '4. 运行与接入环境：',
+ ].join('\n'),
+};
+
+function mailtoHref(email = STUDIO.email) {
+ const subject = encodeURIComponent(STUDIO.mailSubject);
+ const body = encodeURIComponent(STUDIO.mailBody);
+ return `mailto:${email}?subject=${subject}&body=${body}`;
+}
+
+function bindStudioContact() {
+ document.querySelectorAll('[data-contact="email"], [data-contact="email-cta"]').forEach(node => {
+  node.setAttribute('href', node.dataset.contact === 'email-cta' ? mailtoHref() : `mailto:${STUDIO.email}`);
+  if (node.dataset.contact === 'email') node.textContent = STUDIO.email;
+ });
+ document.querySelectorAll('[data-contact="phone"]').forEach(node => {
+  node.setAttribute('href', `tel:${STUDIO.phone.replace(/\D/g, '')}`);
+  node.textContent = STUDIO.phone;
+ });
+ document.querySelectorAll('[data-contact="wechat"]').forEach(button => {
+  button.dataset.copy = STUDIO.wechat;
+  button.textContent = STUDIO.wechat;
+  button.addEventListener('click', async () => {
+   const tip = button.parentElement?.querySelector('.contact-copy-tip');
+   try {
+    await navigator.clipboard.writeText(STUDIO.wechat);
+    if (tip) {
+     tip.hidden = false;
+     window.setTimeout(() => { tip.hidden = true; }, 1600);
+    }
+   } catch (_) {
+    window.prompt('复制微信号：', STUDIO.wechat);
+   }
+  });
+ });
+}
+bindStudioContact();
+
+function applyTheme(id = 'azure') {
+ document.documentElement.dataset.theme = id;
+ const meta = document.querySelector('meta[name="theme-color"]');
+ if (meta) meta.content = getComputedStyle(document.documentElement).getPropertyValue('--dark').trim() || '#0c0e12';
+}
+// 正式站暂锁定「科技冷渐变」；其他主题仍保留在 themes.css，便于后续切换。
+applyTheme('azure');
+try { localStorage.setItem('studio-theme', 'azure'); } catch (_) {}
+
+function enhanceResultPanels() {
+ document.querySelectorAll('.algorithm-row-visual').forEach(visual => {
+  if (visual.dataset.enhanced) return;
+  visual.dataset.enhanced = '1';
+  const head = document.createElement('div');
+  head.className = 'result-panel-head';
+  head.innerHTML = '<span>识别结果</span><span>可复核标注</span>';
+  const stage = document.createElement('div');
+  stage.className = 'result-stage';
+  while (visual.firstChild) stage.appendChild(visual.firstChild);
+  visual.append(head, stage);
+ });
+ document.querySelectorAll('.algorithm-row-figure > figcaption').forEach(caption => {
+  if (caption.dataset.enhanced) return;
+  caption.dataset.enhanced = '1';
+  caption.classList.add('result-caption');
+ });
+ document.querySelectorAll('.algorithm-row-io dt').forEach(dt => {
+  if (dt.textContent.trim() === '输入') dt.textContent = '输入数据';
+  if (dt.textContent.trim() === '输出') dt.textContent = '交付输出';
+ });
+ document.querySelectorAll('.algorithm-row-application > span').forEach(span => {
+  if (span.textContent.trim() === '应用场景') span.textContent = '业务场景';
+ });
+}
+enhanceResultPanels();
+
 const openMedia = [
   {
     "id": "traffic-tracking",
     "file": "traffic.gif",
     "title": "交通目标持续追踪",
-    "desc": "在道路视频中关联目标标识，展示车辆运动与轨迹。",
+    "desc": "在道路视频中关联目标标识，形成可复核的运动轨迹。",
     "repo": "tryolabs/norfair",
     "license": "BSD-3-Clause",
     "url": "https://raw.githubusercontent.com/tryolabs/norfair/e517b4236f6b67a6ecf342f5df1fccb7788dbc54/docs/videos/traffic.gif",
@@ -37,7 +122,7 @@ const openMedia = [
     "id": "visual-annotations",
     "file": "annotation.mp4",
     "title": "多类型视觉结果标注",
-    "desc": "直观看到检测框、轮廓与标签等算法输出的表达方式。",
+    "desc": "以检测框、轮廓与标签呈现识别输出，便于业务复核。",
     "repo": "roboflow/supervision",
     "license": "MIT",
     "url": "https://github.com/roboflow/supervision/assets/26109316/691e219c-0565-4403-9218-ab5644f39bce",
@@ -246,7 +331,7 @@ screeningButtons.forEach(button => {
   $('screening-title').textContent = media.title;
   $('screening-description').textContent = media.desc;
   const playerBounds = screeningVideo.getBoundingClientRect();
-  const headerBottom = document.querySelector('.masthead').getBoundingClientRect().bottom;
+  const headerBottom = document.querySelector('.masthead-bar').getBoundingClientRect().bottom;
   if (playerBounds.bottom <= headerBottom || playerBounds.top >= innerHeight) {
    screeningVideo.scrollIntoView({block: 'center', behavior: 'instant'});
   }
@@ -290,7 +375,7 @@ document.addEventListener('visibilitychange', () => {
 // Reveal is progressive: all content remains visible if motion or JS is unavailable.
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 if (!reduceMotion.matches) {
- const revealNodes = [...document.querySelectorAll('[data-reveal], .section-head, .solution, .delivery-grid article, .screening-player, .cooperation-modes article')];
+ const revealNodes = [...document.querySelectorAll('[data-reveal], .section-head, .solution, .delivery-strip, .story-card, .screening-player, .cooperation-modes article, .contact-action')];
  const revealObserver = new IntersectionObserver(entries => {
   for (const entry of entries) {
    if (!entry.isIntersecting) continue;
@@ -329,3 +414,29 @@ if (!reduceMotion.matches) {
   backdrop.style.setProperty('--hero-shift', '0px');
  });
 }
+
+const masthead = document.querySelector('.masthead');
+const backTop = $('back-top');
+function pageScrollY() {
+ return window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+}
+function syncChrome() {
+ const y = pageScrollY();
+ const compact = y > 12;
+ if (masthead) {
+  masthead.classList.toggle('is-compact', compact);
+  const bar = masthead.querySelector('.masthead-bar');
+  const topGap = compact ? 12 : 0;
+  const barH = bar ? bar.getBoundingClientRect().height : 64;
+  document.documentElement.style.setProperty('--header-height', `${Math.ceil(topGap + barH + 8)}px`);
+ }
+ if (backTop) {
+  const show = y >= Math.min(480, innerHeight * 0.65);
+  backTop.classList.toggle('is-visible', show);
+  backTop.setAttribute('aria-hidden', String(!show));
+  backTop.tabIndex = show ? 0 : -1;
+ }
+}
+syncChrome();
+window.addEventListener('scroll', syncChrome, { passive: true });
+document.addEventListener('scroll', syncChrome, { passive: true, capture: true });

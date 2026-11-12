@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>志通达 · 五结构对照</title>
+<style>
+  :root { color-scheme: dark; font-family: "PingFang SC", "Hiragino Sans GB", sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #090b0f; color: #e8edf2; }
+  header {
+    position: sticky; top: 0; z-index: 2;
+    padding: 18px 22px 14px;
+    background: #090b0ff2; border-bottom: 1px solid #243041;
+  }
+  h1 { margin: 0; font-size: 22px; }
+  p { margin: 8px 0 0; color: #8b97a6; font-size: 13px; line-height: 1.6; max-width: 70em; }
+  .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .tabs a {
+    padding: 8px 12px; border: 1px solid #314155; color: #c5ced8;
+    font: 500 12px/1 "IBM Plex Mono", monospace; text-decoration: none;
+  }
+  .tabs a:hover, .tabs a.is-on { background: #151b26; color: #fff; border-color: #4f8cff; }
+  .stage { height: calc(100vh - 130px); border-top: 1px solid #1b2430; }
+  iframe { width: 100%; height: 100%; border: 0; background: #fff; }
+  .grid {
+    display: none;
+    grid-template-columns: repeat(5, minmax(260px, 1fr));
+    gap: 10px; padding: 10px; height: calc(100vh - 130px);
+  }
+  .grid.on { display: grid; }
+  .stage.on { display: block; }
+  .stage { display: none; }
+  figure { margin: 0; display: flex; flex-direction: column; min-height: 0; border: 1px solid #243041; background: #12161c; }
+  figcaption { display: flex; justify-content: space-between; gap: 8px; padding: 8px 10px; border-bottom: 1px solid #243041; font: 500 11px/1.3 "IBM Plex Mono", monospace; }
+  figcaption a { color: #9ec1ff; }
+  .grid iframe { flex: 1; min-height: 0; }
+  @media (max-width: 1200px) {
+    .grid { grid-template-columns: 1fr; height: auto; }
+    .grid iframe { height: 70vh; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>五结构对照（不是换色）</h1>
+  <p>01 现刊式叙事 · 02 证据墙打头 · 03 左侧控制台 · 04 作品集矩阵 · 05 流程中轴。可单看，也可五屏同列。</p>
+  <div class="tabs" id="tabs">
+    <a href="#all" data-view="all" class="is-on">五屏同列</a>
+    <a href="./01-editorial.html" data-view="01">01 现刊式</a>
+    <a href="./02-proof-first.html" data-view="02">02 证据先行</a>
+    <a href="./03-sidebar.html" data-view="03">03 控制台</a>
+    <a href="./04-gallery.html" data-view="04">04 作品集</a>
+    <a href="./05-process.html" data-view="05">05 流程轴</a>
+  </div>
+</header>
+<section class="grid on" id="grid">
+  <figure>
+    <figcaption><span>01 现刊式</span><a href="./01-editorial.html" target="_blank">打开</a></figcaption>
+    <iframe src="./01-editorial.html" title="01"></iframe>
+  </figure>
+  <figure>
+    <figcaption><span>02 证据先行</span><a href="./02-proof-first.html" target="_blank">打开</a></figcaption>
+    <iframe src="./02-proof-first.html" title="02"></iframe>
+  </figure>
+  <figure>
+    <figcaption><span>03 控制台</span><a href="./03-sidebar.html" target="_blank">打开</a></figcaption>
+    <iframe src="./03-sidebar.html" title="03"></iframe>
+  </figure>
+  <figure>
+    <figcaption><span>04 作品集</span><a href="./04-gallery.html" target="_blank">打开</a></figcaption>
+    <iframe src="./04-gallery.html" title="04"></iframe>
+  </figure>
+  <figure>
+    <figcaption><span>05 流程轴</span><a href="./05-process.html" target="_blank">打开</a></figcaption>
+    <iframe src="./05-process.html" title="05"></iframe>
+  </figure>
+</section>
+<section class="stage" id="stage"><iframe id="frame" title="layout"></iframe></section>
+<script>
+const grid = document.getElementById('grid');
+const stage = document.getElementById('stage');
+const frame = document.getElementById('frame');
+const map = {
+  '01': './01-editorial.html',
+  '02': './02-proof-first.html',
+  '03': './03-sidebar.html',
+  '04': './04-gallery.html',
+  '05': './05-process.html',
+};
+document.getElementById('tabs').addEventListener('click', (event) => {
+  const link = event.target.closest('a[data-view]');
+  if (!link) return;
+  event.preventDefault();
+  document.querySelectorAll('.tabs a').forEach(a => a.classList.remove('is-on'));
+  link.classList.add('is-on');
+  const view = link.dataset.view;
+  if (view === 'all') {
+    grid.classList.add('on');
+    stage.classList.remove('on');
+    return;
+  }
+  grid.classList.remove('on');
+  stage.classList.add('on');
+  frame.src = map[view];
+});
+</script>
+</body>
+</html>

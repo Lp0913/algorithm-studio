@@ -94,8 +94,8 @@
     "changes": "Scaled for website display and JPEG encoded. GIF sources use a still frame. Original figure content and markings retained."
   },
   "1-1": {
-    "src": "./assets/algorithm-effects/web/dota-rotated-detections.jpg",
-    "alt": "遥感目标检测图中下方的飞机检测结果",
+    "src": "./assets/algorithm-effects/web/dota-plane.jpg",
+    "alt": "遥感影像中飞机目标的旋转检测框结果",
     "caption": "用旋转检测框标出飞机位置与朝向。",
     "sourceURL": "https://raw.githubusercontent.com/SJTU-Thinklab-Det/DOTA-DOAI/master/FPN_Tensorflow_Rotation/demo1.png",
     "source": "https://raw.githubusercontent.com/SJTU-Thinklab-Det/DOTA-DOAI/master/FPN_Tensorflow_Rotation/demo1.png",
@@ -113,13 +113,13 @@
       1488,
       1473
     ],
-    "note": "Aircraft is panel (j), bottom second column. Full original includes unrelated categories; crop recommended.",
+    "note": "Aircraft is panel (j), bottom second column. Cropped to a dedicated web asset.",
     "originalSrc": "assets/algorithm-effects/dota-rotated-detections.png",
-    "changes": "Scaled for website display and JPEG encoded. GIF sources use a still frame. Original figure content and markings retained."
+    "changes": "Cropped to the aircraft panel, scaled for website display and JPEG encoded. Original figure content and markings retained."
   },
   "1-2": {
-    "src": "./assets/algorithm-effects/web/dota-rotated-detections.jpg",
-    "alt": "遥感目标检测图中右上方的舰船检测结果",
+    "src": "./assets/algorithm-effects/web/dota-ship.jpg",
+    "alt": "港口影像中舰船目标的旋转检测框结果",
     "caption": "沿舰船方向标出旋转检测框，区分密集停泊目标。",
     "sourceURL": "https://raw.githubusercontent.com/SJTU-Thinklab-Det/DOTA-DOAI/master/FPN_Tensorflow_Rotation/demo1.png",
     "source": "https://raw.githubusercontent.com/SJTU-Thinklab-Det/DOTA-DOAI/master/FPN_Tensorflow_Rotation/demo1.png",
@@ -137,9 +137,9 @@
       1488,
       1473
     ],
-    "note": "Ship is panel (d), top fourth column. Crop recommended.",
+    "note": "Ship is panel (d), top fourth column. Cropped to a dedicated web asset.",
     "originalSrc": "assets/algorithm-effects/dota-rotated-detections.png",
-    "changes": "Scaled for website display and JPEG encoded. GIF sources use a still frame. Original figure content and markings retained."
+    "changes": "Cropped to the ship panel, scaled for website display and JPEG encoded. Original figure content and markings retained."
   },
   "1-3": {
     "src": "./assets/algorithm-effects/web/fire-detection.jpg",
@@ -167,8 +167,8 @@
     "changes": "Scaled for website display and JPEG encoded. GIF sources use a still frame. Original figure content and markings retained."
   },
   "1-5": {
-    "src": "./assets/algorithm-effects/web/dota-rotated-detections.jpg",
-    "alt": "遥感目标检测图中右下方的桥梁检测结果",
+    "src": "./assets/algorithm-effects/web/dota-bridge.jpg",
+    "alt": "遥感影像中桥梁目标的检测框结果",
     "caption": "沿桥梁走向标出目标位置与覆盖范围。",
     "sourceURL": "https://raw.githubusercontent.com/SJTU-Thinklab-Det/DOTA-DOAI/master/FPN_Tensorflow_Rotation/demo1.png",
     "source": "https://raw.githubusercontent.com/SJTU-Thinklab-Det/DOTA-DOAI/master/FPN_Tensorflow_Rotation/demo1.png",
@@ -186,9 +186,9 @@
       1488,
       1473
     ],
-    "note": "Bridge is panel (k), bottom right. Crop recommended.",
+    "note": "Bridge is panel (k), bottom right. Cropped to a dedicated web asset.",
     "originalSrc": "assets/algorithm-effects/dota-rotated-detections.png",
-    "changes": "Scaled for website display and JPEG encoded. GIF sources use a still frame. Original figure content and markings retained."
+    "changes": "Cropped to the bridge panel, scaled for website display and JPEG encoded. Original figure content and markings retained."
   },
   "2-0": {
     "sourceURL": "https://github.com/microsoft/buildings/blob/main/tutorials/building-volume-tutorial.ipynb",

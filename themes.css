@@ -1,0 +1,225 @@
+/* Five studio looks — switch with html[data-theme="..."] */
+
+:root,
+html[data-theme="azure"] {
+  --theme-name: "科技冷渐变";
+  --ink: #0b1018;
+  --dark: #070b12;
+  --darker: #05080e;
+  --paper: #e9eef5;
+  --panel: #dde5ef;
+  --accent: #5aa7ff;
+  --accent-2: #38d6ef;
+  --accent-3: #7a8cff;
+  --accent-strong: #3b7fd4;
+  --gradient-brand: linear-gradient(135deg, #3d8bfd 0%, #38d6ef 48%, #7a8cff 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #3d8bfd33 0%, #38d6ef22 48%, #7a8cff1f 100%);
+  --gradient-shine: linear-gradient(90deg, #3d8bfd, #38d6ef, #8ea2ff);
+  --muted: #5a6575;
+  --line: #c5ceda;
+  --dark-line: #243247;
+  --light: #f2f6fb;
+  --dim: #8e9aab;
+  --glow: #3d8bfd1f;
+  --glow-soft: #38d6ef14;
+  --hero-tint: #3d8bfd28;
+  --screen-active: #122033;
+  --progress-end: #8ea2ff;
+  --cta-hover: #6eb6ff;
+  --mark-ink: #070b12;
+}
+
+html[data-theme="forest"] {
+  --theme-name: "冷青森";
+  --ink: #0e1618;
+  --dark: #0a1214;
+  --darker: #060d0f;
+  --paper: #e8f1f2;
+  --panel: #d9e7ea;
+  --accent: #2bb8b0;
+  --accent-2: #4f8cff;
+  --accent-3: #67e8f9;
+  --accent-strong: #1f8f89;
+  --gradient-brand: linear-gradient(135deg, #1fa8a0 0%, #38d6ef 50%, #4f8cff 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #2bb8b033, #4f8cff22);
+  --gradient-shine: linear-gradient(90deg, #1fa8a0, #38d6ef, #4f8cff);
+  --muted: #5a6b70;
+  --line: #c4d4d8;
+  --dark-line: #24363a;
+  --light: #f1f7f8;
+  --dim: #8ea0a5;
+  --glow: #2bb8b018;
+  --glow-soft: #4f8cff14;
+  --hero-tint: #2bb8b022;
+  --screen-active: #102429;
+  --progress-end: #67e8f9;
+  --cta-hover: #3ec9c1;
+  --mark-ink: #0a1214;
+}
+
+html[data-theme="paper"] {
+  --theme-name: "冰纸";
+  --ink: #121722;
+  --dark: #0c1018;
+  --darker: #080b12;
+  --paper: #f3f6fb;
+  --panel: #e7edf6;
+  --accent: #4f8cff;
+  --accent-2: #94a3b8;
+  --accent-3: #67e8f9;
+  --accent-strong: #3b6fd4;
+  --gradient-brand: linear-gradient(135deg, #334155 0%, #4f8cff 55%, #67e8f9 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #4f8cff22, #67e8f918);
+  --gradient-shine: linear-gradient(90deg, #334155, #4f8cff, #67e8f9);
+  --muted: #64748b;
+  --line: #d5dde8;
+  --dark-line: #2a3444;
+  --light: #f8fafc;
+  --dim: #94a3b8;
+  --glow: #4f8cff14;
+  --glow-soft: #94a3b822;
+  --hero-tint: #4f8cff1f;
+  --screen-active: #172033;
+  --progress-end: #93c5fd;
+  --cta-hover: #6ba0ff;
+  --mark-ink: #0c1018;
+}
+
+html[data-theme="night"] {
+  --theme-name: "深空冷光";
+  --ink: #e8eef8;
+  --dark: #070b14;
+  --darker: #04070e;
+  --paper: #0a101b;
+  --panel: #121a28;
+  --accent: #5aa7ff;
+  --accent-2: #38d6ef;
+  --accent-3: #8ea2ff;
+  --accent-strong: #7db4ff;
+  --gradient-brand: linear-gradient(135deg, #3d8bfd 0%, #22d3ee 50%, #818cf8 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #3d8bfd2e, #22d3ee22, #818cf81f);
+  --gradient-shine: linear-gradient(90deg, #3d8bfd, #22d3ee, #818cf8);
+  --muted: #8b97a6;
+  --line: #243041;
+  --dark-line: #314155;
+  --light: #e8eef8;
+  --dim: #7f8b99;
+  --glow: #3d8bfd22;
+  --glow-soft: #22d3ee14;
+  --hero-tint: #3d8bfd28;
+  --screen-active: #102038;
+  --progress-end: #818cf8;
+  --cta-hover: #6eb6ff;
+  --mark-ink: #070b14;
+}
+
+html[data-theme="night"] body {
+  color: var(--ink);
+}
+html[data-theme="night"] .masthead {
+  color: var(--light);
+}
+html[data-theme="night"] .masthead-bar {
+  background: #080b10e8;
+  border-color: #ffffff14;
+}
+html[data-theme="night"] .section,
+html[data-theme="night"] .capability-directory,
+html[data-theme="night"] .delivery,
+html[data-theme="night"] .contact {
+  color: var(--ink);
+}
+html[data-theme="night"] .capability-directory,
+html[data-theme="night"] .directory-index {
+  background: #0d1117;
+}
+html[data-theme="night"] .delivery {
+  background: #121821;
+}
+html[data-theme="night"] .solutions,
+html[data-theme="night"] .contact {
+  background: transparent;
+}
+html[data-theme="night"] .solution-copy h3,
+html[data-theme="night"] .section-head h2,
+html[data-theme="night"] .algorithm-row h4,
+html[data-theme="night"] .delivery-grid h3 {
+  color: #e8edf2;
+}
+html[data-theme="night"] .directory-index {
+  border-block-color: #243041;
+}
+html[data-theme="night"] .directory-index button {
+  border-right-color: #243041;
+  color: #8b97a6;
+}
+html[data-theme="night"] .directory-index button[aria-selected="true"] {
+  background: #151b24;
+  color: #e8edf2;
+}
+html[data-theme="night"] .algorithm-row {
+  border-top-color: #243041;
+}
+html[data-theme="night"] .footer {
+  background: #05070a;
+}
+
+html[data-theme="brass"] {
+  --theme-name: "钢青";
+  --ink: #10151d;
+  --dark: #0b1017;
+  --darker: #070b11;
+  --paper: #e9eef4;
+  --panel: #dde5ee;
+  --accent: #64748b;
+  --accent-2: #38bdf8;
+  --accent-3: #818cf8;
+  --accent-strong: #475569;
+  --gradient-brand: linear-gradient(135deg, #475569 0%, #38bdf8 52%, #818cf8 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #64748b33, #38bdf822, #818cf81f);
+  --gradient-shine: linear-gradient(90deg, #475569, #38bdf8, #818cf8);
+  --muted: #64748b;
+  --line: #c9d3df;
+  --dark-line: #2a3444;
+  --light: #f1f5f9;
+  --dim: #94a3b8;
+  --glow: #38bdf818;
+  --glow-soft: #818cf814;
+  --hero-tint: #38bdf822;
+  --screen-active: #152033;
+  --progress-end: #93c5fd;
+  --cta-hover: #7dd3fc;
+  --mark-ink: #0b1017;
+}
+
+/* Shared hooks driven by theme tokens */
+body {
+  background:
+    radial-gradient(900px 480px at 100% -10%, var(--glow) 0%, transparent 55%),
+    radial-gradient(720px 420px at 70% 0%, color-mix(in srgb, var(--accent-2) 14%, transparent) 0%, transparent 52%),
+    radial-gradient(1000px 520px at 0% 0%, var(--glow-soft) 0%, transparent 50%),
+    var(--paper);
+}
+.header-cta:hover,
+.hero-cta:hover,
+.contact-mail:hover {
+  background: var(--gradient-brand);
+  background-size: 160% 160%;
+  background-position: 100% 0;
+  filter: brightness(1.06);
+}
+.hero::before {
+  background:
+    linear-gradient(90deg, #07080bf5 6%, #07080be8 28%, #0c0e12a8 58%, #0c0e1233 92%),
+    linear-gradient(0deg, #07080bcc, transparent 48%),
+    var(--gradient-brand-soft);
+}
+.screening-index button[aria-pressed="true"] { background: var(--screen-active); }
+.masthead-bar::after {
+  background: var(--gradient-shine);
+}
+.brand-mark path { stroke: var(--mark-ink); }
+.result-stage::after { border-color: color-mix(in srgb, var(--accent) 14%, transparent); }
+
+/* 正式站锁定主题，预览坞默认隐藏。 */
+.theme-dock { display: none !important; }

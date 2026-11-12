@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>结构 04 · 作品集蜂窝</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Syne:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./layouts.css">
+</head>
+<body class="L04">
+<header class="head">
+  <div>
+    <p style="margin:0 0 10px;font:500 11px/1 var(--mono);letter-spacing:.12em;color:var(--muted)">ZHITONGDA GALLERY</p>
+    <h1>算法结果作品集</h1>
+  </div>
+  <div class="right">
+    <div>志通达算法工作室</div>
+    <div>用案例矩阵代替传统首屏</div>
+    <div><a href="#coop" style="color:var(--accent);font-weight:700">商务合作 →</a></div>
+  </div>
+</header>
+<div class="filters" role="toolbar" aria-label="筛选">
+  <button class="is-on" type="button">全部</button>
+  <button type="button">地物提取</button>
+  <button type="button">检测追踪</button>
+  <button type="button">安全质检</button>
+  <button type="button">影像处理</button>
+</div>
+<main class="bento" aria-label="案例矩阵">
+  <a href="#coop"><img src="../assets/algorithm-effects/web/building.jpg" alt=""><span><small>01 / 地物提取</small>建筑物提取</span></a>
+  <a href="#coop"><img src="../assets/algorithm-effects/web/uav.jpg" alt=""><span><small>02 / 检测追踪</small>无人机识别</span></a>
+  <a href="#coop"><img src="../assets/algorithm-effects/web/water-segmentation.jpg" alt=""><span><small>03 / 地物提取</small>水体提取</span></a>
+  <a href="#coop"><img src="../assets/algorithm-effects/web/helmet-demo.jpg" alt=""><span><small>04 / 安全质检</small>安全帽识别</span></a>
+  <a href="#coop"><img src="../assets/algorithm-effects/web/traffic-tracking.jpg" alt=""><span><small>05 / 检测追踪</small>车辆追踪</span></a>
+  <a href="#coop"><img src="../assets/algorithm-effects/web/insulator-defects.jpg" alt=""><span><small>06 / 安全质检</small>线路隐患</span></a>
+  <a href="#coop"><img src="../assets/algorithm-effects/web/super-resolution.jpg" alt=""><span><small>07 / 影像处理</small>影像超分</span></a>
+  <a href="#coop"><img src="../assets/algorithm-effects/web/crop-classification.jpg" alt=""><span><small>08 / 农林生态</small>农作物分类</span></a>
+  <a href="#coop"><img src="../assets/algorithm-effects/web/fire-detection.jpg" alt=""><span><small>09 / 检测追踪</small>火焰检测</span></a>
+</main>
+<section class="bottom" id="coop">
+  <article><h3>可行性评估</h3><p style="margin:0;color:var(--muted);font-size:14px;line-height:1.6">样本 + 目标 + 环境，先确认能不能做。</p></article>
+  <article><h3>算法定制</h3><p style="margin:0;color:var(--muted);font-size:14px;line-height:1.6">按场景优化模型，按指标验收。</p></article>
+  <article><h3>部署集成</h3><p style="margin:0;color:var(--muted);font-size:14px;line-height:1.6">交付可接入现有系统的方案。</p></article>
+</section>
+<p class="layout-tag">04 作品集蜂窝 · 筛选 + Bento 矩阵首页 <a href="./preview.html">对照</a></p>
+<script>
+document.querySelectorAll('.filters button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(b => b.classList.remove('is-on'));
+    btn.classList.add('is-on');
+  });
+});
+</script>
+</body>
+</html>

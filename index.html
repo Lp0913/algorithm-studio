@@ -1,39 +1,50 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="azure">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#252b27">
-<meta name="description" content="志通达算法研发工作室面向企业与项目团队，提供多方向算法研发与定制开发服务，覆盖可行性评估、原型研发、效果优化与部署集成。">
-<title>志通达算法研发工作室｜算法研发与定制开发</title>
+<meta name="theme-color" content="#070b12">
+<meta name="description" content="志通达算法研发工作室：为遥感、巡检与质检场景定制视觉算法。先评估样本可行性，再交付可复核结果与可接入系统的模型。">
+<title>志通达算法研发工作室｜可复核的视觉算法定制</title>
 <link rel="icon" type="image/png" sizes="128x128" href="./assets/studio-logo.png">
-<link rel="stylesheet" href="./site.css?v=inline-motion-20261111">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./site.css?v=file-open-20261112">
+<link rel="stylesheet" href="./themes.css?v=file-open-20261112">
+<script>
+(() => {
+  document.documentElement.dataset.theme = 'azure';
+  try { localStorage.setItem('studio-theme', 'azure'); } catch (_) {}
+})();
+</script>
 </head>
 <body>
 <a class="skip" href="#main">跳到主要内容</a>
 <header class="masthead">
- <div class="container header-inner">
-  <a class="brand" href="#horizon"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="5" stroke="currentColor" stroke-width="2.6"/><path d="M3 26h11l11-12h12" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/></svg><span>志通达算法研发工作室<small>ALGORITHM STUDIO</small></span></a>
-  <nav aria-label="主导航">
-   <a href="#process">行业方案</a>
-   <a href="#deliverables">交付内容</a>
-   <a href="#light">案例展示</a>
-  </nav>
-  <a href="#contact" class="button header-cta">商务合作 <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+ <div class="container">
+  <div class="masthead-bar">
+   <a class="brand" href="#horizon"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="37" height="37" rx="2" fill="currentColor"/><path d="M6 27h9l9-12h10" stroke-width="2.4" stroke-linejoin="round"/></svg><span>志通达算法工作室<small>ALGORITHM STUDIO</small></span></a>
+   <nav aria-label="主导航">
+    <a href="#process">方案</a>
+    <a href="#stories">交付案例</a>
+    <a href="#light">能力</a>
+    <a href="#contact">合作</a>
+   </nav>
+   <a href="#contact" class="button header-cta">预约评估 <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+  </div>
  </div>
 </header>
 <main id="main">
- <section class="hero" id="horizon" aria-labelledby="hero-title">
+ <section class="hero hero-clean" id="horizon" aria-labelledby="hero-title">
   <img class="hero-backdrop" src="./assets/editorial/hero-city.jpg" width="2172" height="724" alt="" fetchpriority="high">
-  <div class="hero-coordinate" aria-hidden="true"><svg viewBox="0 0 500 500" fill="none"><path class="hero-orbit" d="M35 190V35h155M310 35h155v155M465 310v155H310M190 465H35V310"/><path class="hero-axis" d="M250 0v500M0 250h500"/><circle cx="250" cy="250" r="134"/><circle class="hero-pulse" cx="250" cy="250" r="6"/></svg><span>IDEA → ALGORITHM → IMPACT</span></div>
   <div class="container hero-inner">
    <div class="hero-copy">
-    <p class="eyebrow"><span></span> 志通达算法研发工作室 / ZHITONGDA</p>
-    <h1 id="hero-title"><span class="hero-line"><span>所想，</span></span><span class="hero-line"><span>皆可抵达。</span></span></h1>
-    <p class="hero-intro">从卫星影像和巡检照片中定位变化、标出缺陷，提供可复核的结果和可接入现有系统的算法。</p>
-    <p class="hero-disciplines">算法研发 <i></i> 视觉识别 <i></i> 遥感分析</p>
+    <p class="eyebrow"><span></span> 视觉算法定制 · 遥感 / 巡检 / 质检</p>
+    <h1 id="hero-title"><span class="hero-line"><span>样本先验证，</span></span><span class="hero-line"><span>结果可接入。</span></span></h1>
+    <p class="hero-intro">用你的样本做可行性评估，按约定指标交付识别结果、模型与部署方案——结果可复核，不靠口头承诺。</p>
     <div class="hero-actions">
-     <a class="button hero-cta" href="#process">查看行业方案 <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M5 19h14V5"/></svg></span></a>
-     <a class="hero-secondary" href="#contact">了解合作方式 <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span></a>
+     <a class="button hero-cta" href="#stories">看交付案例 <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M5 19h14V5"/></svg></span></a>
+     <a class="hero-secondary" href="#contact">发样本做评估</a>
     </div>
    </div>
   </div>
@@ -42,18 +53,17 @@
  <section class="solutions section" id="process" aria-labelledby="process-title">
   <div class="container">
    <div class="section-head section-split">
-    <div><p class="eyebrow">01 / 行业解决方案</p><h2 id="process-title"><span>识别目标，</span><span>定位异常</span></h2></div>
-    <p>从遥感调查到现场巡检，提取需要关注的目标与区域，交付可复核的识别结果。</p>
+    <div data-index="01"><p class="eyebrow">行业方案</p><h2 id="process-title"><span>识别目标，</span><span>定位异常</span></h2></div>
+    <p>聚焦两类高频场景；先看交付案例，再按能力目录深挖。</p>
    </div>
    <div class="solutions-grid">
     <article class="solution">
      <a href="#cap-tab-0" class="solution-link" data-capability="cap-tab-0">
       <div class="solution-copy">
-       <p class="solution-industry">01 / 城市与自然资源</p>
+       <p class="solution-industry">城市与自然资源</p>
        <h3>地物提取<span>与变化检测</span></h3>
        <p class="solution-description">识别建筑、水体与植被，找出多期影像中的变化区域。</p>
-       <p class="solution-output"><span>输出结果</span>地物轮廓 · 分类结果 · 变化区域</p>
-       <span class="solution-action">查看识别案例 <span class="solution-arrow" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></span>
+       <span class="solution-action">查看案例 <span class="solution-arrow" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></span>
       </div>
       <div class="solution-image">
        <img src="./assets/editorial/solution-nature.jpg" width="1440" height="696" alt="" loading="lazy">
@@ -63,11 +73,10 @@
     <article class="solution">
      <a href="#cap-tab-5" class="solution-link" data-capability="cap-tab-5">
       <div class="solution-copy">
-       <p class="solution-industry">02 / 工业与基础设施</p>
+       <p class="solution-industry">工业与基础设施</p>
        <h3>缺陷识别<span>与风险定位</span></h3>
        <p class="solution-description">标出裂缝、表面缺陷与作业风险，明确需要现场复核的位置。</p>
-       <p class="solution-output"><span>输出结果</span>异常区域 · 缺陷标注 · 目标位置</p>
-       <span class="solution-action">查看检测案例 <span class="solution-arrow" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></span>
+       <span class="solution-action">查看案例 <span class="solution-arrow" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></span>
       </div>
       <div class="solution-image">
        <img src="./assets/editorial/solution-industry.jpg" width="1440" height="696" alt="" loading="lazy">
@@ -77,32 +86,95 @@
    </div>
   </div>
  </section>
-<section class="delivery section" id="deliverables" aria-labelledby="delivery-title">
- <div class="container">
-  <div class="section-head section-split">
-   <div><p class="eyebrow">02 / DELIVERY</p><h2 id="delivery-title">项目可以交付什么</h2></div>
-   <p>按项目目标约定交付范围，从样本验证推进到实际使用。</p>
-  </div>
-  <div class="delivery-grid">
-   <article><span>01</span><h3>可复核的识别结果</h3><p>提供目标位置、变化区域或缺陷标注，方便业务人员核查。</p></article>
-   <article><span>02</span><h3>适合现场的算法模型</h3><p>用实际样本验证和优化模型，按约定指标评估识别效果。</p></article>
-   <article><span>03</span><h3>可接入系统的部署方案</h3><p>根据现有系统与运行环境，提供接口和部署方案。</p></article>
-  </div>
+<section class="delivery-strip" id="deliverables" aria-label="交付内容">
+ <div class="container delivery-strip-inner">
+  <p class="delivery-strip-label">交付</p>
+  <ul>
+   <li><strong>识别结果</strong><span>轮廓 / 掩膜 / 检测框</span></li>
+   <li><strong>算法模型</strong><span>样本验证与指标评估</span></li>
+   <li><strong>部署方案</strong><span>接口 / 离线包 / 说明</span></li>
+  </ul>
  </div>
 </section>
+
+<section class="section stories" id="stories" aria-labelledby="stories-title">
+ <div class="container">
+  <div class="section-head directory-heading">
+   <p class="eyebrow">交付案例</p>
+   <h2 id="stories-title">客户真正关心的三件事</h2>
+   <p>问题、结果、验收方式。以下为脱敏交付示例，指标可按你的样本重测。</p>
+  </div>
+  <div class="stories-grid">
+   <article class="story-card">
+    <figure class="story-media">
+     <img src="./assets/algorithm-effects/web/vegas-1999.jpg" alt="" loading="lazy" decoding="async">
+     <img src="./assets/algorithm-effects/web/vegas-2024.jpg" alt="" loading="lazy" decoding="async">
+    </figure>
+    <div class="story-body">
+     <p class="story-tag">遥感 · 变化检测</p>
+     <h3>多期影像找出新增与拆除建筑</h3>
+     <p class="story-problem"><span>问题</span>人工对比多期卫星图耗时长，漏检难追责。</p>
+     <p class="story-result"><span>交付</span>输出变化区域掩膜与可复核图斑，供业务人员抽查。</p>
+     <dl class="story-metrics">
+      <div><dt>周期</dt><dd>约 2–4 周验证</dd></div>
+      <div><dt>验收</dt><dd>IoU / 漏检抽查</dd></div>
+      <div><dt>接入</dt><dd>矢量 / GeoJSON</dd></div>
+     </dl>
+     <a class="story-link" href="#algorithm-2-1">查看对应能力 →</a>
+    </div>
+   </article>
+   <article class="story-card">
+    <figure class="story-media story-media-single">
+     <img src="./assets/algorithm-effects/web/crack-mask.jpg" alt="" loading="lazy" decoding="async">
+    </figure>
+    <div class="story-body">
+     <p class="story-tag">巡检 · 缺陷定位</p>
+     <h3>路面裂缝自动标出位置与轮廓</h3>
+     <p class="story-problem"><span>问题</span>巡检照片量大，人工标裂缝慢且标准不一。</p>
+     <p class="story-result"><span>交付</span>像素级裂缝掩膜 + 位置清单，方便现场复核。</p>
+     <dl class="story-metrics">
+      <div><dt>周期</dt><dd>约 1–3 周验证</dd></div>
+      <div><dt>验收</dt><dd>召回率抽检</dd></div>
+      <div><dt>接入</dt><dd>掩膜 / 坐标</dd></div>
+     </dl>
+     <a class="story-link" href="#algorithm-5-5">查看对应能力 →</a>
+    </div>
+   </article>
+   <article class="story-card">
+    <figure class="story-media story-media-single">
+     <img src="./assets/algorithm-effects/web/traffic-tracking.jpg" alt="" loading="lazy" decoding="async">
+    </figure>
+    <div class="story-body">
+     <p class="story-tag">视频 · 目标追踪</p>
+     <h3>道路车辆持续编号与轨迹输出</h3>
+     <p class="story-problem"><span>问题</span>检测框一闪而过，业务系统拿不到稳定轨迹。</p>
+     <p class="story-result"><span>交付</span>跨帧目标 ID + 轨迹线，可写入现有监控/业务库。</p>
+     <dl class="story-metrics">
+      <div><dt>周期</dt><dd>约 2–5 周验证</dd></div>
+      <div><dt>验收</dt><dd>ID 稳定性抽检</dd></div>
+      <div><dt>接入</dt><dd>API / 离线包</dd></div>
+     </dl>
+     <a class="story-link" href="#algorithm-1-4">查看对应能力 →</a>
+    </div>
+   </article>
+  </div>
+  <p class="stories-note">正式报价前先做样本评估：能做再谈范围，做不到会明确说明。</p>
+ </div>
+</section>
+
 <section class="section capability-directory" id="light" aria-labelledby="services-title">
  <div class="container">
   <div class="section-head directory-heading">
-   <p class="eyebrow">03 / CASES</p>
-   <h2 id="services-title">案例展示</h2>
-   <p>从具体算法出发，查看效果与应用场景。</p>
+   <p class="eyebrow">能力目录</p>
+   <h2 id="services-title">可定制的识别方向</h2>
+   <p>按场景浏览结果形态。正式项目以你的样本与约定指标为准。</p>
   </div>
   <div class="directory-layout">
    <div class="directory-index" role="tablist" aria-label="算法能力分类" aria-orientation="horizontal">
     <button type="button" role="tab" id="cap-tab-0" aria-selected="true" aria-controls="cap-panel-0" tabindex="0"><span class="index-number">01</span><span>地物提取</span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button>
     <button type="button" role="tab" id="cap-tab-1" aria-selected="false" aria-controls="cap-panel-1" tabindex="-1"><span class="index-number">02</span><span>检测与追踪</span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button>
     <button type="button" role="tab" id="cap-tab-2" aria-selected="false" aria-controls="cap-panel-2" tabindex="-1"><span class="index-number">03</span><span>时空变化</span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button>
-    <button type="button" role="tab" id="cap-tab-3" aria-selected="false" aria-controls="cap-panel-3" tabindex="-1"><span class="index-number">04</span><span>影像增强</span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button>
+    <button type="button" role="tab" id="cap-tab-3" aria-selected="false" aria-controls="cap-panel-3" tabindex="-1"><span class="index-number">04</span><span>影像处理</span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button>
     <button type="button" role="tab" id="cap-tab-4" aria-selected="false" aria-controls="cap-panel-4" tabindex="-1"><span class="index-number">05</span><span>农林生态</span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button>
     <button type="button" role="tab" id="cap-tab-5" aria-selected="false" aria-controls="cap-panel-5" tabindex="-1"><span class="index-number">06</span><span>安全与质检</span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button>
    </div>
@@ -215,7 +287,7 @@
         <div class="algorithm-row-application"><span>应用场景</span><p>机场设施调查、航空影像解译、飞机目标统计</p></div>
        </div>
        <figure class="algorithm-row-figure" data-reveal>
-        <div class="algorithm-row-visual"><img src="./assets/algorithm-effects/web/dota-rotated-detections.jpg" alt="遥感目标检测图中下方的飞机检测结果" loading="lazy" decoding="async"></div>
+        <div class="algorithm-row-visual"><img src="./assets/algorithm-effects/web/dota-plane.jpg" alt="遥感影像中飞机目标的旋转检测框结果" loading="lazy" decoding="async"></div>
         <figcaption>用旋转检测框标出飞机位置与朝向。</figcaption>
        </figure>
       </section>
@@ -228,7 +300,7 @@
         <div class="algorithm-row-application"><span>应用场景</span><p>港口调查、海面目标观察、舰船分布统计</p></div>
        </div>
        <figure class="algorithm-row-figure" data-reveal>
-        <div class="algorithm-row-visual"><img src="./assets/algorithm-effects/web/dota-rotated-detections.jpg" alt="遥感目标检测图中右上方的舰船检测结果" loading="lazy" decoding="async"></div>
+        <div class="algorithm-row-visual"><img src="./assets/algorithm-effects/web/dota-ship.jpg" alt="港口影像中舰船目标的旋转检测框结果" loading="lazy" decoding="async"></div>
         <figcaption>沿舰船方向标出旋转检测框，区分密集停泊目标。</figcaption>
        </figure>
       </section>
@@ -267,7 +339,7 @@
         <div class="algorithm-row-application"><span>应用场景</span><p>交通设施调查、桥梁定位、基础设施管理</p></div>
        </div>
        <figure class="algorithm-row-figure" data-reveal>
-        <div class="algorithm-row-visual"><img src="./assets/algorithm-effects/web/dota-rotated-detections.jpg" alt="遥感目标检测图中右下方的桥梁检测结果" loading="lazy" decoding="async"></div>
+        <div class="algorithm-row-visual"><img src="./assets/algorithm-effects/web/dota-bridge.jpg" alt="遥感影像中桥梁目标的检测框结果" loading="lazy" decoding="async"></div>
         <figcaption>沿桥梁走向标出目标位置与覆盖范围。</figcaption>
        </figure>
       </section>
@@ -352,11 +424,11 @@
      </div>
     </article>
     <article id="cap-panel-3" role="tabpanel" aria-labelledby="cap-tab-3" class="directory-panel" hidden>
-     <div class="algorithm-category-heading" id="algorithm-3-overview" data-category-overview><div><h3>影像增强</h3><p>改善影像质量，保留分析与识别需要的细节。</p></div><span class="algorithm-count">06 项算法</span></div>
-     <div class="algorithm-collection" aria-label="影像增强算法展示">
+     <div class="algorithm-category-heading" id="algorithm-3-overview" data-category-overview><div><h3>影像处理</h3><p>改善影像质量，并完成配准、拼接与场景划分，为后续识别分析做准备。</p></div><span class="algorithm-count">06 项算法</span></div>
+     <div class="algorithm-collection" aria-label="影像处理算法展示">
       <section class="algorithm-row" id="algorithm-3-0" data-algorithm="3-0" aria-labelledby="algorithm-3-0-name">
        <div class="algorithm-row-copy" data-reveal>
-        <p class="algorithm-row-number">01 / 影像增强</p>
+        <p class="algorithm-row-number">01 / 影像处理</p>
         <h4 id="algorithm-3-0-name">影像超分</h4>
         <p class="algorithm-row-description">提高低分辨率影像的显示细节，为后续查看和分析提供输入。</p>
         <dl class="algorithm-row-io"><div><dt>输入</dt><dd>低分辨率影像</dd></div><div><dt>输出</dt><dd>超分辨率影像</dd></div></dl>
@@ -369,7 +441,7 @@
       </section>
       <section class="algorithm-row" id="algorithm-3-1" data-algorithm="3-1" aria-labelledby="algorithm-3-1-name">
        <div class="algorithm-row-copy" data-reveal>
-        <p class="algorithm-row-number">02 / 影像增强</p>
+        <p class="algorithm-row-number">02 / 影像处理</p>
         <h4 id="algorithm-3-1-name">影像增强</h4>
         <p class="algorithm-row-description">调整亮度、对比度等影像表现，改善数据的可读性。</p>
         <dl class="algorithm-row-io"><div><dt>输入</dt><dd>待增强影像</dd></div><div><dt>输出</dt><dd>增强后的影像</dd></div></dl>
@@ -382,7 +454,7 @@
       </section>
       <section class="algorithm-row" id="algorithm-3-2" data-algorithm="3-2" aria-labelledby="algorithm-3-2-name">
        <div class="algorithm-row-copy" data-reveal>
-        <p class="algorithm-row-number">03 / 影像增强</p>
+        <p class="algorithm-row-number">03 / 影像处理</p>
         <h4 id="algorithm-3-2-name">影像配准</h4>
         <p class="algorithm-row-description">对齐不同时间或来源的影像，为变化分析和数据融合做准备。</p>
         <dl class="algorithm-row-io"><div><dt>输入</dt><dd>参考影像与待配准影像</dd></div><div><dt>输出</dt><dd>对齐影像与配准参数</dd></div></dl>
@@ -395,11 +467,11 @@
       </section>
       <section class="algorithm-row" id="algorithm-3-3" data-algorithm="3-3" aria-labelledby="algorithm-3-3-name">
        <div class="algorithm-row-copy" data-reveal>
-        <p class="algorithm-row-number">04 / 影像增强</p>
-        <h4 id="algorithm-3-3-name">影像分割</h4>
-        <p class="algorithm-row-description">按目标或类别划分影像像素，形成区域级识别结果。</p>
+        <p class="algorithm-row-number">04 / 影像处理</p>
+        <h4 id="algorithm-3-3-name">场景分割</h4>
+        <p class="algorithm-row-description">按道路、车辆、建筑等场景要素划分像素，形成通用区域图，供后续专题识别使用。</p>
         <dl class="algorithm-row-io"><div><dt>输入</dt><dd>待分割影像</dd></div><div><dt>输出</dt><dd>区域掩膜或分类图</dd></div></dl>
-        <div class="algorithm-row-application"><span>应用场景</span><p>场景要素识别、目标区域划分、专题图制作</p></div>
+        <div class="algorithm-row-application"><span>应用场景</span><p>场景要素划分、预处理分区、专题图底图制作</p></div>
        </div>
        <figure class="algorithm-row-figure" data-reveal>
         <div class="algorithm-row-visual"><img src="./assets/algorithm-effects/web/semantic-segmentation.jpg" alt="按像素区分道路、车辆、建筑等区域。" loading="lazy" decoding="async"></div>
@@ -408,7 +480,7 @@
       </section>
       <section class="algorithm-row" id="algorithm-3-4" data-algorithm="3-4" aria-labelledby="algorithm-3-4-name">
        <div class="algorithm-row-copy" data-reveal>
-        <p class="algorithm-row-number">05 / 影像增强</p>
+        <p class="algorithm-row-number">05 / 影像处理</p>
         <h4 id="algorithm-3-4-name">影像镶嵌</h4>
         <p class="algorithm-row-description">拼接多幅具有重叠区域的影像，形成连续覆盖的图像。</p>
         <dl class="algorithm-row-io"><div><dt>输入</dt><dd>多幅重叠影像</dd></div><div><dt>输出</dt><dd>拼接影像</dd></div></dl>
@@ -421,7 +493,7 @@
       </section>
       <section class="algorithm-row" id="algorithm-3-5" data-algorithm="3-5" aria-labelledby="algorithm-3-5-name">
        <div class="algorithm-row-copy" data-reveal>
-        <p class="algorithm-row-number">06 / 影像增强</p>
+        <p class="algorithm-row-number">06 / 影像处理</p>
         <h4 id="algorithm-3-5-name">匀光匀色</h4>
         <p class="algorithm-row-description">统一多幅影像的亮度与色彩表现，减少拼接处的视觉差异。</p>
         <dl class="algorithm-row-io"><div><dt>输入</dt><dd>多幅待处理影像</dd></div><div><dt>输出</dt><dd>色调一致的影像</dd></div></dl>
@@ -606,34 +678,35 @@
 </section>
 <section class="section screening-section" id="motion-examples" aria-labelledby="motion-title">
  <div class="container">
-  <div class="section-head directory-heading">
-   <p class="eyebrow">04 / DEMONSTRATIONS</p>
-   <h2 id="motion-title">视频演示</h2>
-   <p>观看追踪、抠图与三维识别在连续画面中的输出。</p>
+   <div class="section-head directory-heading">
+   <p class="eyebrow">动态示意</p>
+   <h2 id="motion-title">连续画面里的结果长什么样</h2>
+   <p>用于理解输出形态；签约前以你的样本实测为准，不把示意视频当项目验收标准。</p>
   </div>
   <div class="screening-layout">
    <figure class="screening-player">
     <div class="screening-frame">
+     <div class="screening-frame-head" aria-hidden="true"><span>连续输出</span><span>结果展映</span></div>
      <video id="screening-video" controls muted playsinline preload="none" poster="./assets/github/traffic-tracking.jpg" aria-label="交通目标持续追踪"><source src="./assets/github/traffic-tracking.mp4" type="video/mp4"></video>
      <p class="screening-error" id="screening-error" hidden>当前片段未能播放。<a id="screening-download" href="./assets/github/traffic-tracking.mp4" target="_blank" rel="noopener">打开视频文件 <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p>
     </div>
     <figcaption class="screening-caption" aria-live="polite">
-     <div><h3 id="screening-title">交通目标持续追踪</h3><p id="screening-description">在道路视频中关联目标标识，展示车辆运动与轨迹。</p></div>
+     <div><p class="screening-caption-label">输出说明</p><h3 id="screening-title">交通目标持续追踪</h3><p id="screening-description">在道路视频中关联目标标识，形成可复核的运动轨迹。</p></div>
     </figcaption>
    </figure>
    <div class="screening-library">
-    <p class="screening-list-heading"><span>效果片段</span><span>10 部</span></p>
+    <p class="screening-list-heading"><span>展映列表</span><span>10 项</span></p>
     <div class="screening-index" role="group" aria-label="选择演示视频">
-     <button type="button" data-screening="traffic-tracking" aria-pressed="true"><img src="./assets/github/traffic-tracking.jpg" loading="lazy" alt=""><span><small>片段 01</small><strong>交通目标持续追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
-     <button type="button" data-screening="prompt-matting" aria-pressed="false"><img src="./assets/github/prompt-matting.jpg" loading="lazy" alt=""><span><small>片段 02</small><strong>提示式图像抠图</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
-     <button type="button" data-screening="visual-annotations" aria-pressed="false"><img src="./assets/github/visual-annotations.jpg" loading="lazy" alt=""><span><small>片段 03</small><strong>多类型视觉结果标注</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
-     <button type="button" data-screening="tracking-3d" aria-pressed="false"><img src="./assets/github/tracking-3d.jpg" loading="lazy" alt=""><span><small>片段 04</small><strong>三维目标追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
-     <button type="button" data-screening="pose-tracking" aria-pressed="false"><img src="./assets/github/pose-tracking.jpg" loading="lazy" alt=""><span><small>片段 05</small><strong>人体关键点追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
-     <button type="button" data-screening="camera-motion" aria-pressed="false"><img src="./assets/github/camera-motion.jpg" loading="lazy" alt=""><span><small>片段 06</small><strong>运动相机下的目标追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
-     <button type="button" data-screening="pedestrian-tracking" aria-pressed="false"><img src="./assets/github/pedestrian-tracking.jpg" loading="lazy" alt=""><span><small>片段 07</small><strong>行人目标追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
-     <button type="button" data-screening="pose-frame-skipping" aria-pressed="false"><img src="./assets/github/pose-frame-skipping.jpg" loading="lazy" alt=""><span><small>片段 08</small><strong>间隔帧姿态追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
-     <button type="button" data-screening="traffic-mmdet" aria-pressed="false"><img src="./assets/github/traffic-mmdet.jpg" loading="lazy" alt=""><span><small>片段 09</small><strong>交通检测与轨迹关联</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
-     <button type="button" data-screening="traffic-yolov7" aria-pressed="false"><img src="./assets/github/traffic-yolov7.jpg" loading="lazy" alt=""><span><small>片段 10</small><strong>道路车辆追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
+     <button type="button" data-screening="traffic-tracking" aria-pressed="true"><img src="./assets/github/traffic-tracking.jpg" loading="lazy" alt=""><span><small>展映 01</small><strong>交通目标持续追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
+     <button type="button" data-screening="prompt-matting" aria-pressed="false"><img src="./assets/github/prompt-matting.jpg" loading="lazy" alt=""><span><small>展映 02</small><strong>提示式图像抠图</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
+     <button type="button" data-screening="visual-annotations" aria-pressed="false"><img src="./assets/github/visual-annotations.jpg" loading="lazy" alt=""><span><small>展映 03</small><strong>多类型视觉结果标注</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
+     <button type="button" data-screening="tracking-3d" aria-pressed="false"><img src="./assets/github/tracking-3d.jpg" loading="lazy" alt=""><span><small>展映 04</small><strong>三维目标追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
+     <button type="button" data-screening="pose-tracking" aria-pressed="false"><img src="./assets/github/pose-tracking.jpg" loading="lazy" alt=""><span><small>展映 05</small><strong>人体关键点追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
+     <button type="button" data-screening="camera-motion" aria-pressed="false"><img src="./assets/github/camera-motion.jpg" loading="lazy" alt=""><span><small>展映 06</small><strong>运动相机下的目标追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
+     <button type="button" data-screening="pedestrian-tracking" aria-pressed="false"><img src="./assets/github/pedestrian-tracking.jpg" loading="lazy" alt=""><span><small>展映 07</small><strong>行人目标追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
+     <button type="button" data-screening="pose-frame-skipping" aria-pressed="false"><img src="./assets/github/pose-frame-skipping.jpg" loading="lazy" alt=""><span><small>展映 08</small><strong>间隔帧姿态追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
+     <button type="button" data-screening="traffic-mmdet" aria-pressed="false"><img src="./assets/github/traffic-mmdet.jpg" loading="lazy" alt=""><span><small>展映 09</small><strong>交通检测与轨迹关联</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
+     <button type="button" data-screening="traffic-yolov7" aria-pressed="false"><img src="./assets/github/traffic-yolov7.jpg" loading="lazy" alt=""><span><small>展映 10</small><strong>道路车辆追踪</strong></span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></span></button>
     </div>
    </div>
   </div>
@@ -642,24 +715,63 @@
 <section class="contact section" id="contact" aria-labelledby="contact-title">
  <div class="container cooperation">
   <div class="section-head">
-   <p class="eyebrow">05 / COLLABORATION</p>
-   <h2 id="contact-title">商务合作</h2>
-   <p>从一个业务问题和一批样本开始。先确认要识别什么、如何验收，再确定研发与部署范围。</p>
+   <p class="eyebrow">合作</p>
+   <h2 id="contact-title">先评估，再立项</h2>
+   <p>发来目标与脱敏样本。能做会给出验证范围与周期；做不到会直接说明原因。</p>
+   <div class="contact-action">
+    <div class="contact-channels" data-studio-contact>
+     <a class="button contact-mail" data-contact="email-cta" href="mailto:hello@ztd-algo.cn">发样本评估 <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zm0 0 8 7 8-7"/></svg></span></a>
+     <dl class="contact-cards">
+      <div>
+       <dt>邮箱</dt>
+       <dd><a data-contact="email" href="mailto:hello@ztd-algo.cn">hello@ztd-algo.cn</a></dd>
+      </div>
+      <div>
+       <dt>微信</dt>
+       <dd>
+        <button type="button" class="contact-copy" data-contact="wechat" data-copy="ztd_algo">ztd_algo</button>
+        <span class="contact-copy-tip" hidden>已复制</span>
+       </dd>
+      </div>
+      <div>
+       <dt>电话</dt>
+       <dd><a data-contact="phone" href="tel:13800008866">138-0000-8866</a></dd>
+      </div>
+     </dl>
+     <div class="contact-bounds">
+      <p class="contact-bounds-title">合作边界</p>
+      <ul>
+       <li>做：视觉识别 / 遥感分析 / 巡检质检定制</li>
+       <li>不做：无样本空口承诺、与目标无关的套壳交付</li>
+       <li>下一步：确认目标 → 样本评估 → 约定指标 → 研发交付</li>
+      </ul>
+     </div>
+    </div>
+   </div>
   </div>
   <div class="cooperation-modes">
-   <article><span>01 / 验证</span><h3>可行性评估</h3><p>结合样本数据、业务目标和运行环境，确定验证范围。</p></article>
-   <article><span>02 / 研发</span><h3>算法定制</h3><p>针对场景研发和优化模型，按约定指标验证效果。</p></article>
-   <article><span>03 / 交付</span><h3>部署集成</h3><p>根据项目提供模型、接口与部署方案。</p></article>
+   <article><span>01</span><h3>评估</h3><p>确认目标、样本与验收方式。</p></article>
+   <article><span>02</span><h3>研发</h3><p>按场景定制模型并验证指标。</p></article>
+   <article><span>03</span><h3>交付</h3><p>提供模型、接口与部署方案。</p></article>
   </div>
  </div>
 </section>
 </main>
 <footer class="footer">
  <div class="container footer-inner">
-  <a class="brand" href="#horizon">志通达算法研发工作室</a>
-  <nav aria-label="页尾导航"><a href="#process">行业方案</a><a href="#light">案例展示</a><a href="#motion-examples">视频演示</a></nav>
-  <a href="#horizon">回到顶部 <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a>
+  <div class="footer-brand">
+   <a class="brand" href="#horizon">志通达算法研发工作室</a>
+   <p>hello@ztd-algo.cn · 微信 ztd_algo</p>
+  </div>
+  <nav aria-label="页尾导航"><a href="#process">方案</a><a href="#stories">交付案例</a><a href="#light">能力</a><a href="#contact">合作</a></nav>
+  <div class="footer-meta">
+   <a data-contact="phone" href="tel:13800008866">138-0000-8866</a>
+  </div>
  </div>
 </footer>
-<script type="module" src="./site.js?v=inline-motion-20261111"></script>
+<a class="back-top" href="#horizon" id="back-top" aria-label="回到顶部" aria-hidden="true" tabindex="-1">
+ <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4m-6 6 6-6 6 6"/></svg>
+ <span>顶部</span>
+</a>
+<script src="./site.js?v=file-open-20261112" defer></script>
 </body></html>
