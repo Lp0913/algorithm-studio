@@ -39,8 +39,93 @@
     if (!mobileMenu || mobileMenu.hidden || !menuToggle) return;
     if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
   });
-  const desktopBreakpoint = typeof matchMedia === 'function' ? matchMedia('(min-width: 761px)') : null;
+  const desktopBreakpoint = typeof matchMedia === 'function' ? matchMedia('(min-width: 1025px)') : null;
   listen(desktopBreakpoint, 'change', event => { if (event.matches) closeMenu(); });
+
+  // Prepare a project brief locally; there is no form submission or network request.
+  const briefForm = byId('project-brief');
+  if (briefForm?.tagName === 'FORM') {
+    const briefStatus = byId('brief-status');
+    briefStatus?.setAttribute('role', 'status');
+    const goalField = briefForm.elements.namedItem('goal');
+    const dataField = briefForm.elements.namedItem('data');
+    let briefObjectURL = null;
+    let briefReleaseTimer;
+    const releaseBriefURL = () => {
+      clearTimeout(briefReleaseTimer);
+      if (briefObjectURL) URL.revokeObjectURL(briefObjectURL);
+      briefObjectURL = null;
+    };
+    const fieldValue = name => {
+      const field = briefForm.elements.namedItem(name);
+      return typeof field?.value === 'string' ? field.value.trim() : '';
+    };
+    const selectLabel = name => {
+      const field = briefForm.elements.namedItem(name);
+      if (!fieldValue(name)) return '待补充';
+      return field?.selectedOptions?.[0]?.textContent.trim() || fieldValue(name);
+    };
+    [goalField, dataField].forEach(field => listen(field, 'input', () => {
+      field.setCustomValidity('');
+      if (briefStatus) briefStatus.textContent = '';
+    }));
+    listen(briefForm, 'change', () => { if (briefStatus) briefStatus.textContent = ''; });
+    listen(briefForm, 'submit', event => {
+      event.preventDefault();
+      if (briefStatus) briefStatus.textContent = '';
+      const goal = fieldValue('goal');
+      const data = fieldValue('data');
+      if (!goalField || typeof goalField.setCustomValidity !== 'function') {
+        if (briefStatus) briefStatus.textContent = '暂时无法生成需求摘要，请刷新页面后重试。';
+        return;
+      }
+      goalField.setCustomValidity(!goal ? '请填写项目目标。' : goal.length > 240 ? '项目目标请控制在 240 个字符以内。' : '');
+      dataField?.setCustomValidity(data.length > 1000 ? '数据说明请控制在 1000 个字符以内。' : '');
+      if (!briefForm.reportValidity()) return;
+
+      const now = new Date();
+      const date = [now.getFullYear(), String(now.getMonth() + 1).padStart(2, '0'), String(now.getDate()).padStart(2, '0')].join('-');
+      const filename = `志通达-项目需求摘要-${date}.txt`;
+      const content = [
+        '志通达算法研发工作室',
+        '项目需求摘要',
+        `生成日期：${date}`,
+        '',
+        `业务场景：${selectLabel('scene')}`,
+        '',
+        '项目目标：',
+        goal,
+        '',
+        '数据情况：',
+        data || '待补充',
+        '',
+        `部署方式：${selectLabel('deployment')}`,
+        ''
+      ].join('\r\n');
+      releaseBriefURL();
+      const downloadLink = document.createElement('a');
+      try {
+        briefObjectURL = URL.createObjectURL(new Blob(['\uFEFF', content], { type: 'text/plain;charset=utf-8' }));
+        downloadLink.href = briefObjectURL;
+        downloadLink.download = filename;
+        downloadLink.hidden = true;
+        document.body.append(downloadLink);
+        downloadLink.click();
+        if (briefStatus) briefStatus.textContent = `已生成「${filename}」并交由浏览器下载，请在下载列表中查看。内容未发送到服务器。`;
+        // Keep the URL alive long enough for the browser to start the download.
+        briefReleaseTimer = setTimeout(releaseBriefURL, 30000);
+      } catch (_) {
+        releaseBriefURL();
+        if (briefStatus) briefStatus.textContent = '需求摘要暂未能生成，请重试或检查浏览器的下载设置。';
+      } finally {
+        downloadLink.remove();
+      }
+    });
+    listen(window, 'pagehide', releaseBriefURL);
+    // The HTML starts disabled so a no-JavaScript visit cannot submit fields as a URL.
+    const briefSubmit = briefForm.querySelector('[type="submit"]');
+    if (briefSubmit) briefSubmit.disabled = false;
+  }
 
   // Each comparison is independent and retains native range keyboard controls.
   all('[data-compare]').forEach(compare => {
