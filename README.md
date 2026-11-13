@@ -73,7 +73,7 @@ python3 tools/preview-server.py
 
 修改页面结构时编辑构建模板及 `catalog-render.js`；不要只改生成的 `index.html`，因为下次构建会覆盖它。只修改 `app.js` 或样式文件时无需重新生成 HTML；对外发布前应统一运行总构建确认输出。
 
-当前未填写邮箱、微信、电话号码等联系方式，也没有提交需求或发送消息的后台接口。后续提供真实联系方式后，再在导航或介绍视图的模板中添加。
+联系方式已配置在 `build-app.cjs` 的 `contact` 模板：首页导航的“联系咨询”进入 `#/about`。微信号为 `ztdgzszx`，邮箱为 `zhitongda888@qq.com`；微信二维码原图保存在 `assets/wechat-contact.jpg`。复制按钮由 `app.js` 处理，邮箱使用 `mailto:` 打开访客的邮件应用。网站本身不收集或提交咨询消息。更新联系方式后运行 `node build-app.cjs`。
 
 ## 素材说明
 
