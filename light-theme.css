@@ -1,0 +1,59 @@
+/* Silver and ice-blue: a bright computational landscape, with quiet contrast. */
+.home-page{background:#f1f6f8;color:#132c3d;--ink:#132c3d;--muted:#567080;--accent:#087eaa;--rule:#cbdbe1}
+.home-header,.home-header.scrolled{background:#f5f9fbda;color:#132c3d;border-bottom:1px solid #cadce466;backdrop-filter:blur(20px)}
+.home-header .brand img{filter:grayscale(1)}
+.home-page .pill{background:#126d98;color:#fff;border-color:#126d98;box-shadow:0 8px 24px #1f72951a}
+.home-page .pill:hover{background:#095a83;color:#fff!important}
+.home-page .pill .icon{filter:invert(1)}
+.home-header .primary-nav>a:hover,.primary-nav>a[aria-current=page]:not(.pill){color:#087eaa}
+.home-header .menu-toggle .icon{filter:none}
+.home-header .mobile-menu{background:#f5f9fb;color:#132c3d;box-shadow:0 18px 30px #183e4d0d}
+.home-header .mobile-menu a{border-color:#ccdce3}
+.tech-hero{background:#eff6f9}
+.tech-visual img{object-position:50% 54%}
+.tech-shade{background:linear-gradient(90deg,#f4f9fcdd 0%,#f4f9fc60 34%,transparent 67%),linear-gradient(0deg,#eff6f9 0%,transparent 20%)}
+.tech-eyebrow{color:#30657e}
+.tech-eyebrow>span{background:#078cbd;box-shadow:0 0 14px #078cbd20}
+.tech-eyebrow small{color:#567585;border-color:#a8c2ce}
+.tech-copy h1{font-weight:550;color:#112e40}
+.tech-copy h1 span{color:#167da6}
+.tech-sub{color:#456576}
+.glass-link{border-color:#93b4c470;background:#ffffffa1;color:#244f66;box-shadow:inset 0 1px #fff}
+.glass-link:hover{background:#fff;border-color:#8fb4c5}
+.glass-link .icon{filter:none}
+.tech-fields{color:#567585}.tech-fields span+span{border-color:#a8c2ce}
+.tech-corner{color:#527586}
+.tech-bottom{color:#436779;border-color:#a2c1cf66}
+.tech-bottom .icon{filter:none;opacity:.7}
+.section-label{color:#44778e}
+.home-demo{background:#eff5f8}
+.home-section-top h2{color:#132c3d}
+.all-demos{color:#527080}
+.demo-film video{border-radius:8px;background:#10222c;box-shadow:0 18px 40px #1f4c6312}
+.demo-film-caption{color:#203e51}.demo-film-caption small{color:#617c8b}
+.app-route-demos .home-demo-options{scrollbar-color:#b5cbd5 #eff5f8}
+.home-demo-choice{color:#365667;border-color:#cadbe3}
+.home-demo-choice>span{color:#648899}
+.home-demo-choice p{color:#647c89}
+.home-demo-choice>.icon{filter:none;opacity:.65}
+.home-demo-choice[aria-pressed=true]{color:#007ea9;border-top-color:#007ea9}
+.home-demo-choice:hover{background:#e8f1f5}
+.demo-catalog-link{color:#466b7d}
+.home-page .home-intro .icon,.home-page .direction-link .icon,.all-demos .icon,.demo-catalog-link .icon{filter:none}
+.home-about{background:#f1f6f8}.home-about-copy{color:#567080}
+.home-page .footer-bottom{color:#5d7988;border-color:#c5d8e1}.home-page .footer-bottom a:hover{color:#087eaa}
+.app-route-algorithms{background:#f5f7f7;--paper:#f5f7f7;--ink:#193544;--muted:#647883;--accent:#097da5;--rule:#c8d5da;color:var(--ink)}
+.app-route-algorithms .home-header{background:#f5f8f9ed;color:#193544;border-color:#d1dfe5}
+.app-route-algorithms .primary-nav>a:hover,.app-route-algorithms .primary-nav>a[aria-current=page]:not(.pill){color:#087eaa}
+.app-route-algorithms .pill{background:#126d98;border-color:#126d98}
+.app-route-algorithms .home-header .mobile-menu{background:#f5f8f9;color:#193544}
+.app-route-algorithms .home-header .mobile-menu a{border-color:#cbdce4}
+.app-route-algorithms .chapter-index{background:#f5f7f7;border-color:#c8d5da}
+.app-route-algorithms .chapter-heading p{color:#647883}
+.app-route-algorithms .algorithm-list li{border-color:#bdcdd4}
+.app-route-algorithms .algorithm-list li:has([aria-pressed=true]){border-color:#097da5}
+.app-route-algorithms .compare-label.after{background:#075c7be8}
+.app-route-algorithms .stage-frame.is-image{background:#ecf0f1}
+@media(max-width:1050px){.tech-shade{background:linear-gradient(90deg,#f4f9fce6,transparent 88%),linear-gradient(0deg,#eff6f9,transparent 28%)}}
+@media(max-width:520px){.tech-shade{background:linear-gradient(180deg,#f1f7fb 0%,#f1f7fbd9 35%,#f1f7fb10 64%,#eff6f9 100%)}.tech-visual{top:24%;left:-48%;right:-12%}.tech-copy{padding-top:133px}.tech-eyebrow small{letter-spacing:0}.tech-actions{gap:9px}.tech-actions .pill{padding-inline:17px}.glass-link{padding-inline:16px}}
+@media(max-width:350px){.tech-eyebrow small{display:none}.tech-actions{gap:8px}.tech-actions .pill{padding-inline:13px;gap:9px}.glass-link{padding-inline:12px;gap:8px}.tech-copy h1{font-size:51px}.tech-fields{gap:11px}.tech-fields span+span{padding-left:11px}}

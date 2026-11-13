@@ -1,0 +1,22 @@
+{
+  "purpose": "地块提取交互布局的生成式视觉示意；并非算法实测输出",
+  "mode": "built-in image_gen",
+  "before": {
+    "file": "field-before.jpg",
+    "width": 1200,
+    "height": 1000,
+    "bytes": 329214,
+    "original": "/Users/hongjin/.codex/generated_images/01a1cec5-33ab-7f13-93e8-b8eec28f8a78/exec-22c108bd-a868-472f-84c8-f95cfd709a82.png",
+    "prompt": "Use case: photorealistic-natural. Generate a single high-resolution natural aerial photograph for an algorithm website's clearly labeled illustrative comparison. Target 1200 x 1000, landscape near-square. Straight-down nadir drone view of flat agricultural land, rich muted natural greens and pale wheat-brown fields. About twenty to thirty irregular small adjoining farm parcels with clearly visible existing hedgerows, narrow earth tracks, straight and gently bent field boundaries. A small cluster of rural white-roof buildings near the upper right and a few tree groups, but most of the frame is fields. Realistic fine crop texture and believable parcel geometry, soft daylight, neutral balanced natural colors. Clean photographic composition suitable for a premium warm ivory editorial website. This is raw aerial imagery with NO segmentation contours, NO artificial boundary lines, NO annotations, NO text, NO numbers, NO markers, NO UI, NO before-after split, NO frame. No mountains, dramatic forest, clouds or horizon. One full image only."
+  },
+  "after": {
+    "file": "field-after.jpg",
+    "width": 1200,
+    "height": 1000,
+    "bytes": 370068,
+    "original": "/Users/hongjin/.codex/generated_images/01a1cec5-33ab-7f13-93e8-b8eec28f8a78/exec-abdd655e-a102-42cc-a128-10ba7ff74485.png",
+    "prompt": "Use case: precise-object-edit. Edit this exact aerial photograph to add a thin golden-yellow parcel-boundary line overlay for a clearly labeled illustrative before/after slider on an algorithm website. CRITICAL INVARIANTS: preserve the entire underlying photograph, same exact camera, geometry, crop, dimensions, colors, buildings, vegetation, lighting, shadows and texture. No zoom, no recenter, no perspective change, no relighting, no new landscape. The only change is fine clean boundary lines, approximately 2px at full image resolution, carefully following the visible existing outlines of each individual cultivated field. Trace boundaries along the actual hedgerows and paths that separate parcels. The original photos must align when overlaid. Color muted bright warm gold #E5CB62, solid clear hairline with no glow, no filled polygons. Draw each agricultural field's outer edge, leave trees, roads and village unfilled and without inappropriate boxes. No text, no numbers, no markers, no UI, no border, no labels, no before-after composite. One complete annotated version of the SAME image."
+  },
+  "alignment": "Buildings, field outlines, hedgerows, paths visually align; generated edit may change fine surface texture. Suitable for design illustration, not numerical evaluation.",
+  "processing": "ffmpeg scale=1200:1000 and JPEG q:v=3 only; no drawn annotation added with code."
+}

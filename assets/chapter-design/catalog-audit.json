@@ -1,0 +1,376 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-12",
+  "counts": {
+    "groups": 6,
+    "algorithms": 35,
+    "videos": 10
+  },
+  "missingFiles": [],
+  "sourceIndex": "index.html (pre-redesign catalog and media-data)",
+  "rules": [
+    "目录与全部35项算法 ID 保持不变。",
+    "静态照片与科研面板只作其真实内容的展示，不制造额外结果或性能数字。",
+    "所有真实来源与许可元数据仍保留于 JSON 及原 notices/licenses 文件；主内容无需堆砌技术来源说明。",
+    "三个合法对比为同一区域双期遥感、匀光匀色前后、裂缝原图与掩膜；不要把其他多联科研图硬当同场景滑块。"
+  ],
+  "issues": [
+    {
+      "algorithmId": "0-0",
+      "name": "建筑物提取",
+      "kind": "semantic-or-presentation",
+      "message": "三联图包含影像、参考标注与距离/概率预测可视化；不要把热图说成已矢量化的精确建筑轮廓。"
+    },
+    {
+      "algorithmId": "0-1",
+      "name": "地块提取",
+      "kind": "semantic-or-presentation",
+      "message": "五联研究图包含 Window A / Window B / Semantic 2-class / Semantic 3-class / Instance class；各面板关系需保留，不能把两个输入窗口当作前后处理对比。"
+    },
+    {
+      "algorithmId": "0-1",
+      "kind": "wide-multi-panel",
+      "dimensions": [
+        1000,
+        196
+      ],
+      "message": "包含多个并列面板。主效果图应 object-fit: contain，不能直接 cover 裁成 4:3。"
+    },
+    {
+      "algorithmId": "0-3",
+      "name": "林地提取",
+      "kind": "semantic-or-presentation",
+      "message": "复用的是树种与草地多类别分类图，可说明林木覆盖；没有独立验证的二值林地提取掩膜。页面说明应写林木覆盖与类别分布，不得称为二值林地提取实测结果。"
+    },
+    {
+      "algorithmId": "0-3",
+      "kind": "limited-resolution",
+      "dimensions": [
+        600,
+        606
+      ],
+      "message": "作为缩略图或等比完整图展示；避免不必要放大。"
+    },
+    {
+      "algorithmId": "1-0",
+      "name": "无人机识别",
+      "kind": "semantic-or-presentation",
+      "message": "该图展示可见光/红外无人机持续跟踪，适合目标定位示例，不代表所有无人机检测场景。"
+    },
+    {
+      "algorithmId": "1-0",
+      "kind": "limited-resolution",
+      "dimensions": [
+        640,
+        256
+      ],
+      "message": "作为缩略图或等比完整图展示；避免不必要放大。"
+    },
+    {
+      "algorithmId": "1-1",
+      "name": "飞机检测",
+      "kind": "semantic-or-presentation",
+      "message": "Aircraft is panel (j), bottom second column. Cropped to a dedicated web asset."
+    },
+    {
+      "algorithmId": "1-2",
+      "name": "舰船检测",
+      "kind": "semantic-or-presentation",
+      "message": "Ship is panel (d), top fourth column. Cropped to a dedicated web asset."
+    },
+    {
+      "algorithmId": "1-4",
+      "kind": "wide-multi-panel",
+      "dimensions": [
+        960,
+        246
+      ],
+      "message": "包含多个并列面板。主效果图应 object-fit: contain，不能直接 cover 裁成 4:3。"
+    },
+    {
+      "algorithmId": "1-5",
+      "name": "桥梁识别",
+      "kind": "semantic-or-presentation",
+      "message": "Bridge is panel (k), bottom right. Cropped to a dedicated web asset."
+    },
+    {
+      "algorithmId": "2-0",
+      "name": "建筑物变化检测",
+      "kind": "semantic-or-presentation",
+      "message": "该图为双期建筑密度和高度差值分布；不要称作逐栋建筑变化检测掩膜。"
+    },
+    {
+      "algorithmId": "2-1",
+      "name": "地物变化检测",
+      "kind": "semantic-or-presentation",
+      "message": "两张图是同一区域不同年份卫星观测，用于双期对照；不是模型自动输出的变化掩膜。"
+    },
+    {
+      "algorithmId": "2-2",
+      "kind": "limited-resolution",
+      "dimensions": [
+        672,
+        336
+      ],
+      "message": "作为缩略图或等比完整图展示；避免不必要放大。"
+    },
+    {
+      "algorithmId": "2-3",
+      "name": "建筑物高度估计",
+      "kind": "semantic-or-presentation",
+      "message": "Extracted unchanged image/png output from executed notebook; no original standalone image URL. Must publish local PNG or inline data URL. Preserve all plot labels."
+    },
+    {
+      "algorithmId": "2-4",
+      "name": "光伏选址",
+      "kind": "semantic-or-presentation",
+      "message": "该仓库演示使用生成的输入指标栅格，只能作为方法输出示意，不是实际项目选址结果。"
+    },
+    {
+      "algorithmId": "3-1",
+      "kind": "limited-resolution",
+      "dimensions": [
+        384,
+        288
+      ],
+      "message": "作为缩略图或等比完整图展示；避免不必要放大。"
+    },
+    {
+      "algorithmId": "4-0",
+      "kind": "wide-multi-panel",
+      "dimensions": [
+        1000,
+        271
+      ],
+      "message": "包含多个并列面板。主效果图应 object-fit: contain，不能直接 cover 裁成 4:3。"
+    },
+    {
+      "algorithmId": "4-1",
+      "kind": "limited-resolution",
+      "dimensions": [
+        600,
+        606
+      ],
+      "message": "作为缩略图或等比完整图展示；避免不必要放大。"
+    },
+    {
+      "algorithmId": "4-2",
+      "name": "病虫害检测",
+      "kind": "semantic-or-presentation",
+      "message": "图像为病叶分类与 Grad-CAM 热图；不是像素级病斑分割，也不展示虫害定位。"
+    },
+    {
+      "algorithmId": "4-4",
+      "name": "牛群检测",
+      "kind": "semantic-or-presentation",
+      "message": "图片只有 313×293 像素，不宜大幅放大。"
+    },
+    {
+      "algorithmId": "4-4",
+      "kind": "limited-resolution",
+      "dimensions": [
+        313,
+        293
+      ],
+      "message": "作为缩略图或等比完整图展示；避免不必要放大。"
+    },
+    {
+      "algorithmId": "5-0",
+      "kind": "limited-resolution",
+      "dimensions": [
+        550,
+        439
+      ],
+      "message": "作为缩略图或等比完整图展示；避免不必要放大。"
+    },
+    {
+      "algorithmId": "5-1",
+      "kind": "limited-resolution",
+      "dimensions": [
+        550,
+        395
+      ],
+      "message": "作为缩略图或等比完整图展示；避免不必要放大。"
+    },
+    {
+      "algorithmId": "5-2",
+      "name": "安全帽识别",
+      "kind": "semantic-or-presentation",
+      "message": "仅有静态 GIF 帧图片，当前本地没有原 GIF 或视频；不要把静态图称作可播放视频。"
+    },
+    {
+      "algorithmId": "5-2",
+      "kind": "limited-resolution",
+      "dimensions": [
+        640,
+        416
+      ],
+      "message": "作为缩略图或等比完整图展示；避免不必要放大。"
+    },
+    {
+      "algorithmId": "5-3",
+      "name": "焊接件缺陷检测",
+      "kind": "semantic-or-presentation",
+      "message": "保留原图 Ours/Ground Truth 标签；它们是来源图的标签，不是本站性能声明。"
+    },
+    {
+      "algorithmId": "5-3",
+      "kind": "wide-multi-panel",
+      "dimensions": [
+        1400,
+        332
+      ],
+      "message": "包含多个并列面板。主效果图应 object-fit: contain，不能直接 cover 裁成 4:3。"
+    },
+    {
+      "algorithmId": "5-4",
+      "kind": "wide-multi-panel",
+      "dimensions": [
+        773,
+        245
+      ],
+      "message": "包含多个并列面板。主效果图应 object-fit: contain，不能直接 cover 裁成 4:3。"
+    },
+    {
+      "algorithmId": "5-5",
+      "name": "道路裂缝检测",
+      "kind": "semantic-or-presentation",
+      "message": "前后图分别为原路面与分割掩膜，尺寸高有 4px 差异，比较容器应统一显示比例。"
+    }
+  ],
+  "cropSuggestions": [
+    {
+      "image": "./assets/algorithm-effects/web/field-segmentation.jpg",
+      "dimensions": [
+        1000,
+        196
+      ],
+      "use": "缩略图可选最后的实例分割面板；主图保留全图并解释不同方法。",
+      "crop": [
+        827,
+        19,
+        169,
+        170
+      ],
+      "captionRequired": "地块实例分割结果"
+    },
+    {
+      "image": "./assets/algorithm-effects/web/building.jpg",
+      "dimensions": [
+        1200,
+        500
+      ],
+      "use": "缩略图可选左侧原始影像，仅代表输入场景，不代表提取结果。",
+      "crop": [
+        50,
+        82,
+        338,
+        337
+      ],
+      "captionRequired": "建筑原始影像"
+    },
+    {
+      "image": "./assets/algorithm-effects/web/water-segmentation.jpg",
+      "dimensions": [
+        1080,
+        432
+      ],
+      "use": "缩略图可取原图区域；如果显示算法结果，保留全图对照。",
+      "crop": [
+        136,
+        93,
+        246,
+        245
+      ],
+      "captionRequired": "水体原始影像"
+    },
+    {
+      "image": "./assets/algorithm-effects/web/tree-species.jpg",
+      "dimensions": [
+        600,
+        606
+      ],
+      "use": "建议保留全图含类别图例，不裁剪结果后称作二值林地掩膜。"
+    },
+    {
+      "image": "./assets/algorithm-effects/web/greenhouse.jpg",
+      "dimensions": [
+        1000,
+        417
+      ],
+      "use": "图内目标与轮廓直接对应，适合地物章节大图；裁剪只可缩小视野，不重绘轮廓。"
+    },
+    {
+      "image": "./assets/algorithm-effects/web/crop-classification.jpg",
+      "dimensions": [
+        1000,
+        271
+      ],
+      "use": "缩略图可取预测分割面板，完整图保留输入、标注与两类预测的区别。",
+      "crop": [
+        515,
+        11,
+        217,
+        217
+      ],
+      "captionRequired": "作物全景分割示例"
+    },
+    {
+      "image": "./assets/github/traffic-tracking.jpg",
+      "dimensions": [
+        960,
+        246
+      ],
+      "use": "视频宽幅左右对照：保持 960:246 比例。缩略图可取右半结果，不把左右两路视频拆成同一画面的滑块。",
+      "crop": [
+        480,
+        0,
+        480,
+        246
+      ],
+      "captionRequired": "车辆追踪结果"
+    },
+    {
+      "image": "./assets/algorithm-effects/web/weld-defects.jpg",
+      "dimensions": [
+        1400,
+        332
+      ],
+      "use": "保持原始 Ours/Ground Truth 标签与全幅，禁止裁去标签后将来源图的 Ours 归为本站。"
+    },
+    {
+      "image": "./assets/algorithm-effects/web/gear-defects.jpg",
+      "dimensions": [
+        773,
+        245
+      ],
+      "use": "多角度方法比较图，完整保留，不能 cover 成单物体特写。"
+    }
+  ],
+  "featuredRecommendations": [
+    {
+      "groupId": "0",
+      "featuredId": "0-1"
+    },
+    {
+      "groupId": "1",
+      "featuredId": "1-4"
+    },
+    {
+      "groupId": "2",
+      "featuredId": "2-1"
+    },
+    {
+      "groupId": "3",
+      "featuredId": "3-5"
+    },
+    {
+      "groupId": "4",
+      "featuredId": "4-0"
+    },
+    {
+      "groupId": "5",
+      "featuredId": "5-5"
+    }
+  ]
+}
