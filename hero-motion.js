@@ -29,7 +29,7 @@
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');
     const buttons = options.modeButtons ? Array.from(options.modeButtons) : [];
     const statusNode = options.statusNode;
-    let width = 0, heightPx = 0, dpr = 1, mobile = false;
+    let width = 0, heightPx = 0, dpr = 1, mobile = false, wide = 0;
     let active = true, paused = false, destroyed = false, raf = 0;
     let mode = 'reconstruction', modeTime = 0, clock = 0, elapsed = 0, last = 0;
     let pointerX = 0, pointerY = 0, angleX = 0, angleY = 0;
@@ -114,7 +114,7 @@
       const pitch = .64 + angleY * .08;
       projection = {
         cy: Math.cos(yaw), sy: Math.sin(yaw), cp: Math.cos(pitch), sp: Math.sin(pitch),
-        cx: width * (mobile ? .47 : .64), cyScreen: heightPx * (mobile ? .77 : .67),
+        cx: width * (mobile ? .47 : .64 - .035 * wide), cyScreen: heightPx * (mobile ? .77 : .67),
         scale: mobile ? Math.min(width * .034, heightPx * .052) : Math.min(width * .021, heightPx * .052)
       };
     }
@@ -128,7 +128,7 @@
         p.cyScreen - (y * p.cp - b * p.sp) * p.scale * perspective, perspective];
     }
     function visibility(x, y) {
-      return (mobile ? 1 : smooth(width * .37, width * .48, x))
+      return (mobile ? 1 : smooth(width * (.37 - .06 * wide), width * (.48 - .06 * wide), x))
         * smooth(heightPx * (mobile ? .43 : .12), heightPx * (mobile ? .59 : .23), y)
         * (1 - smooth(heightPx * .89, heightPx, y));
     }
@@ -220,7 +220,7 @@
     function sceneBounds() {
       return mobile
         ? {x:width*.055,y:heightPx*.59,w:width*.89,h:heightPx*.245}
-        : {x:width*.52,y:heightPx*.285,w:width*.43,h:heightPx*.485};
+        : {x:width*(.52-.06*wide),y:heightPx*.285,w:width*(.43+.035*wide),h:heightPx*.485};
     }
     function polygon(vertices, fill, stroke, lineWidth=1, opacity=1) {
       ctx.beginPath();
@@ -349,7 +349,7 @@
       const yaw=-.43+Math.sin((state.phase-4)*.17)*.14+angleX*.10;
       const pitch=.43+angleY*.05,cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);
       const scale=mobile?Math.min(width*.026,heightPx*.029):Math.min(width*.0138,heightPx*.034);
-      const cx=width*(mobile?.50:.742),baseY=heightPx*(mobile?.765:.62);
+      const cx=width*(mobile?.50:.742-.045*wide),baseY=heightPx*(mobile?.765:.62);
       function projectArch(x,y,z) {
         const a=x*cy-z*sy,b=x*sy+z*cy,depth=y*sp+b*cp,p=70/(70-depth);
         return [cx+a*scale*p,baseY-(y*cp-b*sp)*scale*p,p];
@@ -472,7 +472,8 @@
       const bounds = canvas.getBoundingClientRect();
       width = bounds.width; heightPx = bounds.height;
       if(width < 1 || heightPx < 1) return;
-      mobile = width < 700; dpr = Math.min(window.devicePixelRatio || 1,mobile ? 1.35 : 1.6);
+      mobile = width < 700; wide = clamp((width - 1600) / 960);
+      dpr = Math.min(window.devicePixelRatio || 1,mobile ? 1.35 : 1.6);
       canvas.width = Math.round(width*dpr); canvas.height = Math.round(heightPx*dpr);
       if(knownMobile !== mobile) { makeScene(); knownMobile = mobile; }
       paint(); schedule();

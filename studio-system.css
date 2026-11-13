@@ -25,6 +25,12 @@
   box-shadow: 0 1px 0 #ffffff80;
 }
 .home-page .home-header .brand strong { font-family: var(--sans); font-weight: 600; }
+.home-page .home-header .brand img {
+  object-fit: contain;
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+  border-radius: 0;
+}
 .home-page .primary-nav > a[aria-current="page"]:not(.pill),
 .home-page .primary-nav > a:hover { color: var(--accent); }
 .home-page .home-header .mobile-menu { background: #f5fafd; color: var(--ink); }
