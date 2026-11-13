@@ -54,8 +54,15 @@
 }
 @media(max-width:370px){.scene-legend{gap:7px}.scene-legend>span{gap:4px}.scene-disclaimer{display:none}}
 
+/* Keep the studio's core service visible while the algorithm scenes rotate. */
+.tech-copy .tech-eyebrow{font-size:20px;letter-spacing:.08em}
+.tech-copy .tech-eyebrow b{font-weight:600;color:#245773}
+.tech-copy .tech-eyebrow small{font-family:var(--sans);font-size:11px;letter-spacing:.06em;color:#607b8d}
+@media(min-width:1600px){.tech-copy .tech-eyebrow{font-size:24px}.tech-copy .tech-eyebrow small{font-size:12px}}
+@media(max-width:760px){.tech-copy .tech-eyebrow{font-size:17px;letter-spacing:.04em}.tech-copy .tech-eyebrow small{font-size:10px}}
+@media(max-width:370px){.tech-copy .tech-eyebrow{font-size:16px}.tech-copy .tech-eyebrow small{font-size:9px}}
+
 /* Automatic scene sequence: full-width choices carry a quiet time indicator. */
-.tech-eyebrow b{font-weight:500}
 .hero-dock{display:grid;grid-template-columns:minmax(170px,1fr) minmax(0,2fr);gap:32px}
 .hero-modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .hero-mode{position:relative;overflow:hidden;justify-content:center}
